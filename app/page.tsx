@@ -5,7 +5,6 @@ import { ProductGrid } from "@/components/boty/product-grid"
 import { BrandGrid } from "@/components/boty/brands-grid"
 import { WhyChooseUs } from "@/components/boty/why-choose-us"
 import { ProjectsCaseStudies } from "@/components/boty/projects-case-studies"
-import { EasyBuyingProcess } from "@/components/boty/easy-buying-process"
 import { GlobalCustomers } from "@/components/boty/global-customers"
 import { FAQSection } from "@/components/boty/faq-section"
 import { HomeContactSection } from "@/components/boty/home-contact-section"
@@ -68,10 +67,7 @@ export default function HomePage() {
       {/* 7. Projects & Case Studies */}
       <ProjectsCaseStudies />
 
-      {/* 8. Our Working Process */}
-      <EasyBuyingProcess />
-
-      {/* 9. Client Testimonials & Global Reach */}
+      {/* 8. Client Testimonials & Global Reach */}
       <GlobalCustomers />
 
       {/* 10. Frequently Asked Questions */}
