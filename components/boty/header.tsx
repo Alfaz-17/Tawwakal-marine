@@ -212,20 +212,20 @@ export function Header() {
         <div className="max-w-7xl mx-auto flex items-center justify-between gap-3">
           
           {/* Left Contact Details: Phone & Email */}
-          <div className="flex items-center gap-4 sm:gap-6 flex-wrap">
+          <div className="flex items-center gap-3 sm:gap-6 flex-nowrap overflow-x-auto no-scrollbar py-0.5">
             <a 
               href="tel:+916356547827" 
-              className="inline-flex items-center gap-1.5 text-white/90 hover:text-[#0095A8] transition-colors font-semibold"
+              className="inline-flex items-center gap-1.5 text-white/90 hover:text-[#0095A8] transition-colors font-semibold shrink-0"
             >
-              <Phone className="w-3.5 h-3.5 text-[#0095A8]" />
+              <Phone className="w-3.5 h-3.5 text-[#0095A8] shrink-0" />
               <span>+91 6356547827</span>
             </a>
 
             <a 
               href="mailto:sales@tawwakalautomation.com" 
-              className="inline-flex items-center gap-1.5 text-white/90 hover:text-[#0095A8] transition-colors font-semibold"
+              className="inline-flex items-center gap-1.5 text-white/90 hover:text-[#0095A8] transition-colors font-semibold shrink-0"
             >
-              <Mail className="w-3.5 h-3.5 text-[#0095A8]" />
+              <Mail className="w-3.5 h-3.5 text-[#0095A8] shrink-0" />
               <span>sales@tawwakalautomation.com</span>
             </a>
           </div>
