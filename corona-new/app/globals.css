@@ -1,0 +1,326 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@custom-variant dark (&:is(.dark *));
+
+/* Tawwakal Automation — Architectural Marine & Industrial Aesthetic */
+:root {
+  --background: #F7F5F0; /* Warm luxury ivory canvas from reference design */
+  --foreground: #182230; /* Deep rich dark text */
+  --card: #FFFFFF;
+  --card-foreground: #182230;
+  --popover: #FFFFFF;
+  --popover-foreground: #182230;
+  --primary: #0B153B; /* Deep Navy */
+  --primary-foreground: #FFFFFF;
+  --secondary: #EAE7E0;
+  --secondary-foreground: #0B153B;
+  --muted: #EFECE6;
+  --muted-foreground: #667085;
+  --accent: #008C95; /* Marine Teal */
+  --accent-foreground: #FFFFFF;
+  --destructive: #DC2626;
+  --destructive-foreground: #FFFFFF;
+  --border: #E6E2D8;
+  --input: #E6E2D8;
+  --ring: #008C95;
+  --radius: 1rem;
+}
+
+.dark {
+  --background: #0B1226;
+  --foreground: #F4F7FA;
+  --card: #111C38;
+  --card-foreground: #F4F7FA;
+  --popover: #111C38;
+  --popover-foreground: #F4F7FA;
+  --primary: #0B153B;
+  --primary-foreground: #FFFFFF;
+  --secondary: #18264A;
+  --secondary-foreground: #F4F7FA;
+  --muted: #18264A;
+  --muted-foreground: #8A98A8;
+  --accent: #008C95;
+  --accent-foreground: #FFFFFF;
+  --destructive: #EF4444;
+  --destructive-foreground: #FFFFFF;
+  --border: #1E305C;
+  --input: #1E305C;
+  --ring: #008C95;
+}
+
+@theme inline {
+  --font-sans: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-display: 'Syne', 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-mono: 'Geist Mono', monospace;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 2px);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+  body {
+    @apply bg-background text-foreground antialiased selection:bg-accent/20 selection:text-accent;
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+}
+
+.font-display {
+  font-family: 'Syne', 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+/* Custom industrial soft shadow utility */
+.marine-shadow {
+  box-shadow: 0 4px 20px -2px rgba(11, 21, 59, 0.08), 0 2px 6px -1px rgba(11, 21, 59, 0.04);
+}
+
+.marine-shadow-lg {
+  box-shadow: 0 12px 32px -4px rgba(11, 21, 59, 0.12), 0 4px 12px -2px rgba(11, 21, 59, 0.06);
+}
+
+/* Smooth transitions */
+.marine-transition {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Utility to hide scrollbar but maintain functionality */
+@utility no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+  }
+}
+
+/* ==========================================
+   TAWWAKAL PROFESSIONAL MARITIME BACKGROUND SYSTEM
+   Tailored for industrial authority, high contrast & executive engineering feel
+========================================== */
+
+/* Base section container: Maritime Steel-Ice tone with solid depth */
+.ta-section {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: linear-gradient(
+    135deg,
+    #EEF4F9 0%,
+    #E4EFF7 45%,
+    #D7E7F2 100%
+  );
+}
+
+/* Background canvas */
+.ta-background {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Light variant: Refined technical ice-steel gradient */
+.ta-background-light {
+  background: linear-gradient(
+    135deg,
+    #F0F6FB 0%,
+    #E6F0F8 50%,
+    #DAE9F4 100%
+  );
+}
+
+/* Soft variant: Richer maritime atmosphere with directional teal diffusion */
+.ta-background-soft {
+  background:
+    radial-gradient(
+      ellipse at 85% 15%,
+      rgba(0, 149, 168, 0.14),
+      transparent 50%
+    ),
+    linear-gradient(
+      135deg,
+      #E7F1F8 0%,
+      #DCE9F3 50%,
+      #D0E3F0 100%
+    );
+}
+
+/* Dark variant: Deep Admiralty Navy with high-authority contrast, ZERO white */
+.ta-background-dark {
+  background: linear-gradient(
+    135deg,
+    #020C1A 0%,
+    #061D45 55%,
+    #072450 100%
+  );
+}
+
+.ta-section:has(.ta-background-dark),
+.ta-section-dark {
+  background: #061D45 !important;
+}
+
+/* Ambient engineering glow: Subtle teal illumination instead of blinding white */
+.ta-background-glow {
+  position: absolute;
+  width: 650px;
+  height: 650px;
+  top: -200px;
+  right: 5%;
+  background: radial-gradient(
+    circle,
+    rgba(0, 149, 168, 0.16) 0%,
+    rgba(6, 29, 69, 0.04) 60%,
+    transparent 75%
+  );
+  filter: blur(50px);
+}
+
+.ta-background-dark .ta-background-glow {
+  background: radial-gradient(
+    circle,
+    rgba(0, 149, 168, 0.38) 0%,
+    rgba(0, 201, 219, 0.15) 50%,
+    transparent 75%
+  );
+  filter: blur(75px);
+}
+
+/* SVG flowing waves */
+.ta-background-waves {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ta-background-dark .ta-background-waves {
+  opacity: 0.65;
+}
+
+/* Content always above background */
+.ta-section > .ta-content,
+.ta-section > .container,
+.ta-section > div:not(.ta-background) {
+  position: relative;
+  z-index: 2;
+}
+
+/* Professional Industrial Product & Feature Cards */
+.ta-card {
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  border-radius: 18px;
+  box-shadow: 0 4px 18px rgba(6, 29, 69, 0.06), 0 1px 3px rgba(6, 29, 69, 0.04);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ta-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(6, 29, 69, 0.12), 0 2px 8px rgba(0, 149, 168, 0.15);
+  border-color: #0095A8;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .ta-background-glow {
+    width: 320px;
+    height: 320px;
+    top: -80px;
+    right: -80px;
+  }
+
+  .ta-background-waves {
+    width: 150%;
+    left: -25%;
+  }
+
+  .ta-card {
+    border-radius: 14px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ta-background-waves {
+    animation: none !important;
+  }
+  .ta-card {
+    animation: none !important;
+    transition: none !important;
+  }
+  .ta-card:hover {
+    transform: none !important;
+  }
+}
+
+/* ==========================================
+   INFINITE MARQUEE CAROUSEL
+========================================== */
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee-infinite {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 90s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-infinite:hover {
+  animation-play-state: paused;
+}
+
+.animate-marquee-brands {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 45s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-brands:hover {
+  animation-play-state: paused;
+}
+
+@media (max-width: 768px) {
+  .animate-marquee-infinite {
+    animation-duration: 70s;
+  }
+  .animate-marquee-brands {
+    animation-duration: 35s;
+  }
+}

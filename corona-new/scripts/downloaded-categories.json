@@ -1,0 +1,458 @@
+[
+  {
+    "id": 405890597123,
+    "title": "Adapter",
+    "handle": "adapter",
+    "localPath": "/categories/adapter.png"
+  },
+  {
+    "id": 405890138371,
+    "title": "Amplifier",
+    "handle": "amplifier",
+    "localPath": "/categories/amplifier.png"
+  },
+  {
+    "id": 405890531587,
+    "title": "Block",
+    "handle": "block",
+    "localPath": "/categories/block.png"
+  },
+  {
+    "id": 405890564355,
+    "title": "Bulbs & Lamps",
+    "handle": "bulbs-lamps",
+    "localPath": "/categories/bulbs-lamps.png"
+  },
+  {
+    "id": 405889941763,
+    "title": "Cable & Connector",
+    "handle": "cable-connector",
+    "localPath": "/categories/cable-connector.png"
+  },
+  {
+    "id": 405889974531,
+    "title": "Capacitor",
+    "handle": "capacitor",
+    "localPath": "/categories/capacitor.png"
+  },
+  {
+    "id": 405889908995,
+    "title": "Circuit Breaker",
+    "handle": "circuit-breaker",
+    "localPath": "/categories/circuit-breaker.png"
+  },
+  {
+    "id": 405889581315,
+    "title": "Coil",
+    "handle": "coil",
+    "localPath": "/categories/coil.png"
+  },
+  {
+    "id": 405889614083,
+    "title": "Computer",
+    "handle": "computer",
+    "localPath": "/categories/computer.png"
+  },
+  {
+    "id": 405888991491,
+    "title": "Contactor",
+    "handle": "contactor",
+    "localPath": "/categories/contactor.png"
+  },
+  {
+    "id": 405888532739,
+    "title": "Control Unit",
+    "handle": "control-unit",
+    "localPath": "/categories/control-unit.png"
+  },
+  {
+    "id": 405889220867,
+    "title": "Control Valve",
+    "handle": "control-valve",
+    "localPath": "/categories/control-valve.png"
+  },
+  {
+    "id": 405889679619,
+    "title": "Controller",
+    "handle": "controller",
+    "localPath": "/categories/controller.png"
+  },
+  {
+    "id": 405889777923,
+    "title": "Converter",
+    "handle": "converter",
+    "localPath": "/categories/converter.png"
+  },
+  {
+    "id": 405890105603,
+    "title": "Cooling Fan",
+    "handle": "cooling-fan",
+    "localPath": "/categories/cooling-fan.png"
+  },
+  {
+    "id": 483542106371,
+    "title": "Cylinder",
+    "handle": "cylinder",
+    "localPath": "/categories/cylinder.png"
+  },
+  {
+    "id": 405889876227,
+    "title": "Detector",
+    "handle": "detector",
+    "localPath": "/categories/detector.png"
+  },
+  {
+    "id": 405888663811,
+    "title": "Drives",
+    "handle": "drives",
+    "localPath": "/categories/drives.png"
+  },
+  {
+    "id": 405890662659,
+    "title": "Electronic Components",
+    "handle": "electronic-components",
+    "localPath": "/categories/electronic-components.png"
+  },
+  {
+    "id": 405890466051,
+    "title": "Encoder",
+    "handle": "encoder",
+    "localPath": "/categories/encoder.png"
+  },
+  {
+    "id": 461414007043,
+    "title": "Fast Selling",
+    "handle": "fast-selling",
+    "localPath": "/categories/fast-selling.png"
+  },
+  {
+    "id": 405889384707,
+    "title": "Filter",
+    "handle": "filter",
+    "localPath": "/categories/filter.png"
+  },
+  {
+    "id": 405889417475,
+    "title": "Fire Alarm systems",
+    "handle": "alarm",
+    "localPath": "/categories/alarm.png"
+  },
+  {
+    "id": 405889089795,
+    "title": "Fuse",
+    "handle": "fuse",
+    "localPath": "/categories/fuse.png"
+  },
+  {
+    "id": 405889319171,
+    "title": "Heat Detector",
+    "handle": "heat-detector",
+    "localPath": "/categories/heat-detector.png"
+  },
+  {
+    "id": 405890040067,
+    "title": "Heater",
+    "handle": "heater",
+    "localPath": "/categories/heater.png"
+  },
+  {
+    "id": 405888631043,
+    "title": "HMI",
+    "handle": "hmi",
+    "localPath": "/categories/hmi.png"
+  },
+  {
+    "id": 405890007299,
+    "title": "Horn & Speaker",
+    "handle": "horn-speaker",
+    "localPath": "/categories/horn-speaker.png"
+  },
+  {
+    "id": 405890269443,
+    "title": "Hvac & Refrigeration Spares",
+    "handle": "refrigeration-spares",
+    "localPath": "/categories/refrigeration-spares.png"
+  },
+  {
+    "id": 405888827651,
+    "title": "I/O Modules",
+    "handle": "i-o-modules",
+    "localPath": "/categories/i-o-modules.png"
+  },
+  {
+    "id": 405889810691,
+    "title": "Indicator",
+    "handle": "indicator",
+    "localPath": "/categories/indicator.png"
+  },
+  {
+    "id": 451293217027,
+    "title": "Industrial Automation",
+    "handle": "industrial-automation",
+    "localPath": "/categories/industrial-automation.png"
+  },
+  {
+    "id": 451293249795,
+    "title": "Injector",
+    "handle": "injector",
+    "localPath": "/categories/injector.png"
+  },
+  {
+    "id": 405890367747,
+    "title": "Inverter",
+    "handle": "inverter",
+    "localPath": "/categories/inverter.png"
+  },
+  {
+    "id": 405890433283,
+    "title": "Joystick",
+    "handle": "joystick",
+    "localPath": "/categories/joystick.png"
+  },
+  {
+    "id": 451293380867,
+    "title": "Marine Automation",
+    "handle": "marine-automation",
+    "localPath": "/categories/marine-automation.png"
+  },
+  {
+    "id": 405889155331,
+    "title": "Meter",
+    "handle": "meter",
+    "localPath": "/categories/meter.png"
+  },
+  {
+    "id": 405888499971,
+    "title": "Motor",
+    "handle": "motor",
+    "localPath": "/categories/motor.png"
+  },
+  {
+    "id": 405890400515,
+    "title": "Navigation",
+    "handle": "navigation",
+    "localPath": "/categories/navigation.png"
+  },
+  {
+    "id": 405889286403,
+    "title": "Oil Mist Detector",
+    "handle": "oil-mist-detector",
+    "localPath": "/categories/oil-mist-detector.png"
+  },
+  {
+    "id": 421184078083,
+    "title": "Other",
+    "handle": "other",
+    "localPath": "/categories/other.png"
+  },
+  {
+    "id": 405888729347,
+    "title": "PCB",
+    "handle": "pcb",
+    "localPath": "/categories/pcb.png"
+  },
+  {
+    "id": 454213271811,
+    "title": "Pilot Light",
+    "handle": "pilot-light",
+    "localPath": "/categories/pilot-light.png"
+  },
+  {
+    "id": 405888598275,
+    "title": "PLC Systems",
+    "handle": "plc-systems",
+    "localPath": "/categories/plc-systems.png"
+  },
+  {
+    "id": 405889188099,
+    "title": "Pneumatic",
+    "handle": "pneumatic",
+    "localPath": "/categories/pneumatic.png"
+  },
+  {
+    "id": 405889843459,
+    "title": "Potentiometers & Variable Resistors",
+    "handle": "potentiometers-variable-resistors",
+    "localPath": "/categories/potentiometers-variable-resistors.png"
+  },
+  {
+    "id": 405888565507,
+    "title": "Power Supply",
+    "handle": "power-supply",
+    "localPath": "/categories/power-supply.png"
+  },
+  {
+    "id": 483377873155,
+    "title": "Pressor Sensor",
+    "handle": "pressor-sensor",
+    "localPath": "/categories/pressor-sensor.png"
+  },
+  {
+    "id": 405889450243,
+    "title": "Pressure Gauge",
+    "handle": "pressure-gauge",
+    "localPath": "/categories/pressure-gauge.png"
+  },
+  {
+    "id": 405889483011,
+    "title": "Pressure Switches",
+    "handle": "pressure-switches",
+    "localPath": "/categories/pressure-switches.png"
+  },
+  {
+    "id": 405890236675,
+    "title": "Pump Spares",
+    "handle": "pump-spares",
+    "localPath": "/categories/pump-spares.png"
+  },
+  {
+    "id": 405889253635,
+    "title": "Pumps",
+    "handle": "pumps",
+    "localPath": "/categories/pumps.png"
+  },
+  {
+    "id": 405889745155,
+    "title": "Radar",
+    "handle": "radar",
+    "localPath": "/categories/radar.png"
+  },
+  {
+    "id": 405890498819,
+    "title": "Recorder",
+    "handle": "recorder",
+    "localPath": "/categories/recorder.png"
+  },
+  {
+    "id": 405890171139,
+    "title": "Rectifier",
+    "handle": "rectifier",
+    "localPath": "/categories/rectifier.png"
+  },
+  {
+    "id": 405889057027,
+    "title": "Regulator",
+    "handle": "regulator",
+    "localPath": "/categories/regulator.png"
+  },
+  {
+    "id": 405888762115,
+    "title": "Relays",
+    "handle": "relays",
+    "localPath": "/categories/relays.png"
+  },
+  {
+    "id": 405890072835,
+    "title": "Scanner",
+    "handle": "scanner",
+    "localPath": "/categories/scanner.png"
+  },
+  {
+    "id": 405890695427,
+    "title": "Seal/Repair Kit",
+    "handle": "seal-repair-kit",
+    "localPath": "/categories/seal-repair-kit.png"
+  },
+  {
+    "id": 405890302211,
+    "title": "Seals, O-Rings & Gasket",
+    "handle": "seals-o-rings-gasket",
+    "localPath": "/categories/seals-o-rings-gasket.png"
+  },
+  {
+    "id": 405888696579,
+    "title": "Sensors",
+    "handle": "sensors",
+    "localPath": "/categories/sensors.png"
+  },
+  {
+    "id": 405889351939,
+    "title": "Separator",
+    "handle": "separator",
+    "localPath": "/categories/separator.png"
+  },
+  {
+    "id": 405888893187,
+    "title": "Servo Drive",
+    "handle": "servo-drive",
+    "localPath": "/categories/servo-drive.png"
+  },
+  {
+    "id": 405888860419,
+    "title": "Servo Motor",
+    "handle": "servo-motor",
+    "localPath": "/categories/servo-motor.png"
+  },
+  {
+    "id": 405889548547,
+    "title": "Solenoid Valve",
+    "handle": "solenoid-valve",
+    "localPath": "/categories/solenoid-valve.png"
+  },
+  {
+    "id": 405890629891,
+    "title": "Starter",
+    "handle": "starter",
+    "localPath": "/categories/starter.png"
+  },
+  {
+    "id": 405889712387,
+    "title": "Switch",
+    "handle": "switch",
+    "localPath": "/categories/switch.png"
+  },
+  {
+    "id": 405890203907,
+    "title": "Telecom and Communication",
+    "handle": "telecom-and-communication",
+    "localPath": "/categories/telecom-and-communication.png"
+  },
+  {
+    "id": 405889646851,
+    "title": "Thermometer",
+    "handle": "thermometer",
+    "localPath": "/categories/thermometer.png"
+  },
+  {
+    "id": 405889515779,
+    "title": "Thermostat",
+    "handle": "thermostat",
+    "localPath": "/categories/thermostat.png"
+  },
+  {
+    "id": 405889122563,
+    "title": "Timer",
+    "handle": "timer",
+    "localPath": "/categories/timer.png"
+  },
+  {
+    "id": 405888958723,
+    "title": "Transducer",
+    "handle": "transducer",
+    "localPath": "/categories/transducer.png"
+  },
+  {
+    "id": 405889024259,
+    "title": "Transformers",
+    "handle": "transformer",
+    "localPath": "/categories/transformer.png"
+  },
+  {
+    "id": 451300131075,
+    "title": "Transistor",
+    "handle": "transistor",
+    "localPath": "/categories/transistor.png"
+  },
+  {
+    "id": 405888794883,
+    "title": "Transmitter",
+    "handle": "transmitter",
+    "localPath": "/categories/transmitter.png"
+  },
+  {
+    "id": 405888925955,
+    "title": "VFD",
+    "handle": "vfd",
+    "localPath": "/categories/vfd.png"
+  }
+]
