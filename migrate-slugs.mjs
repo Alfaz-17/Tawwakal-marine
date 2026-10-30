@@ -8,6 +8,8 @@ async function migrateSlugs() {
     const products = await Product.find({ slug: { $exists: false } });
     console.log(`Found ${products.length} products without slugs.`);
 
+    
+    
     for (const product of products) {
       // The pre-save hook in models.ts will handle slug generation
       // but we need to trigger it.
