@@ -15,34 +15,26 @@ export function ProductGrid() {
   const [activeTab, setActiveTab] = useState<"all" | "industrial" | "marine">("all")
 
   useEffect(() => {
+    let isMounted = true
     const fetchProducts = async () => {
       setLoading(true)
       try {
-        let endpoint = "/products?featured=true&limit=8"
+        let endpoint = "/products?limit=8"
         if (activeTab === "industrial") endpoint += "&division=industrial-automation"
         if (activeTab === "marine") endpoint += "&division=marine-automation"
 
         const prodRes = await api.get(endpoint)
-        let list = prodRes.data
-        
-        if (!Array.isArray(list) || list.length === 0) {
-          let fallbackEndpoint = "/products?limit=8"
-          if (activeTab === "industrial") fallbackEndpoint += "&division=industrial-automation"
-          if (activeTab === "marine") fallbackEndpoint += "&division=marine-automation"
-          const fallbackRes = await api.get(fallbackEndpoint)
-          list = fallbackRes.data
-        }
-
-        if (Array.isArray(list)) {
-          setProducts(list.slice(0, 8))
+        if (isMounted && Array.isArray(prodRes.data)) {
+          setProducts(prodRes.data.slice(0, 8))
         }
       } catch (err) {
         console.error("Error fetching homepage products:", err)
       } finally {
-        setLoading(false)
+        if (isMounted) setLoading(false)
       }
     }
     fetchProducts()
+    return () => { isMounted = false }
   }, [activeTab])
 
   return (

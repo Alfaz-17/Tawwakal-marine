@@ -9,6 +9,7 @@ import { MarineLoader } from "@/components/common/marine-loader"
 import { OrderForm } from "@/components/order-form"
 import { motion } from "framer-motion"
 import Breadcrumbs from "@/components/seo/breadcrumbs"
+import { ProductCard } from "@/components/product-card"
 
 export default function ProductDetailContent({ slug }: { slug: string }) {
   const [product, setProduct] = useState<any>(null)

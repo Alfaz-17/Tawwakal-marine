@@ -3,10 +3,10 @@ import connectToDatabase from '@/lib/db';
 import { Product, Category, Brand } from '@/lib/models';
 import { getSession } from '@/lib/auth';
 import { isValidObjectId } from 'mongoose';
+import { getCache, setCache, invalidateCache } from '@/lib/cache';
 
 export async function GET(req: Request) {
   try {
-    await connectToDatabase();
     const { searchParams } = new URL(req.url);
     const category = searchParams.get('category');
     const brand = searchParams.get('brand');
@@ -14,6 +14,20 @@ export async function GET(req: Request) {
     const division = searchParams.get('division');
     const q = searchParams.get('q') || searchParams.get('search');
     const limit = parseInt(searchParams.get('limit') || '0', 10);
+    const page = parseInt(searchParams.get('page') || '1', 10);
+
+    const cacheKey = `products:${category || ''}:${brand || ''}:${featured || ''}:${division || ''}:${q || ''}:${limit}:${page}`;
+    const cachedData = getCache(cacheKey);
+    if (cachedData) {
+      return NextResponse.json(cachedData, {
+        headers: {
+          'Cache-Control': 'public, s-maxage=60, stale-while-revalidate=300',
+          'X-Cache': 'HIT',
+        },
+      });
+    }
+
+    await connectToDatabase();
 
     const query: any = {};
 
@@ -30,7 +44,7 @@ export async function GET(req: Request) {
       if (isValidObjectId(category)) {
         query.category = category;
       } else {
-        const foundCat = await Category.findOne({ slug: category }).lean();
+        const foundCat = await Category.findOne({ slug: category }).select('_id').lean();
         if (foundCat) {
           query.category = (foundCat as any)._id;
         } else {
@@ -46,11 +60,10 @@ export async function GET(req: Request) {
       } else {
         const foundBrand = await Brand.findOne({ 
           name: { $regex: new RegExp(`^${brand}$`, 'i') } 
-        }).lean();
+        }).select('_id').lean();
         if (foundBrand) {
           query.brand = (foundBrand as any)._id;
         } else {
-          // Fallback to checking brandName field directly
           query.brandName = { $regex: new RegExp(brand, 'i') };
         }
       }
@@ -88,20 +101,31 @@ export async function GET(req: Request) {
       }
     }
 
+    // Project only necessary fields for high-speed listing payload
+    // Sort featured first, then newest, eliminating need for fallback roundtrips
     let productsQuery = Product.find(query)
+      .select('title slug partNumber modelNumber brandName price availability condition image images category brand featured division originLocation warranty testingStatus sku')
       .populate('category', 'name slug division')
       .populate('brand', 'name logo')
-      .sort({ createdAt: -1 });
+      .sort({ featured: -1, createdAt: -1 });
 
     if (limit > 0) {
+      const skip = (page - 1) * limit;
+      if (skip > 0) {
+        productsQuery = productsQuery.skip(skip);
+      }
       productsQuery = productsQuery.limit(limit);
     }
 
     const products = await productsQuery.lean();
-      
+
+    // Cache results (shorter TTL for searches, longer for catalog)
+    setCache(cacheKey, products, q ? 30 : 120);
+
     return NextResponse.json(products, {
       headers: {
         'Cache-Control': 'public, s-maxage=60, stale-while-revalidate=300',
+        'X-Cache': 'MISS',
       },
     });
   } catch (error) {
@@ -121,20 +145,14 @@ export async function POST(req: Request) {
     const body = await req.json();
     
     const product = await Product.create(body);
-    console.log('Product created successfully:', product._id);
+    invalidateCache('products');
+    invalidateCache('product');
     
     return NextResponse.json(product);
   } catch (error: any) {
-    console.error('Products POST error details:', {
-      message: error.message,
-      code: error.code,
-      name: error.name,
-      errors: error.errors,
-      stack: error.stack
-    });
+    console.error('Products POST error details:', error);
     return NextResponse.json({ 
-      error: error.message || 'Internal Server Error',
-      detail: error.errors || error.stack || 'No detail available'
+      error: error.message || 'Internal Server Error'
     }, { status: 500 });
   }
 }

@@ -98,6 +98,13 @@ ProductSchema.index({
   keywords: 'text'
 });
 
+// High-speed sorting & filtering indexes for catalog queries
+ProductSchema.index({ category: 1, createdAt: -1 });
+ProductSchema.index({ brand: 1, createdAt: -1 });
+ProductSchema.index({ division: 1, createdAt: -1 });
+ProductSchema.index({ featured: 1, createdAt: -1 });
+ProductSchema.index({ createdAt: -1 });
+
 const preSaveProduct = function(this: any) {
   if (this.isModified('title') && (!this.slug || this.isNew)) {
     this.slug = this.title

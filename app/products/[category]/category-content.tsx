@@ -24,44 +24,41 @@ export default function CategoryContent() {
   const itemsPerPage = 12
 
   useEffect(() => {
+    let isMounted = true
     const fetchData = async () => {
       try {
         setLoading(true)
-        const categoriesRes = await api.get("/categories")
+        // Parallel fetch for lightning speed
+        const [categoriesRes, productsRes] = await Promise.all([
+          api.get("/categories"),
+          api.get(`/products?category=${categorySlug}`)
+        ])
+
+        if (!isMounted) return
+
+        let foundCategory: any = null
         if (Array.isArray(categoriesRes.data)) {
           setAllCategories(categoriesRes.data)
+          foundCategory = categoriesRes.data.find((c: any) => 
+            c.slug === categorySlug || c._id === categorySlug
+          )
+          setCategoryInfo(foundCategory)
         }
         
-        const currentCategory = Array.isArray(categoriesRes.data) ? categoriesRes.data.find((c: any) => 
-          c.slug === categorySlug || c._id === categorySlug
-        ) : null
-        setCategoryInfo(currentCategory)
-        
-        if (currentCategory) {
-          const productsRes = await api.get(`/products?category=${currentCategory._id}`)
-          if (Array.isArray(productsRes.data)) {
-            setProducts(productsRes.data)
-          }
-        } else {
-          const productsRes = await api.get("/products")
-          if (Array.isArray(productsRes.data)) {
-            const filtered = productsRes.data.filter((p: any) => 
-              p.category?.slug === categorySlug || 
-              p.category?.name?.toLowerCase().replace(/\s+/g, '-') === categorySlug
-            )
-            setProducts(filtered)
-            if (filtered.length > 0 && filtered[0].category) {
-              setCategoryInfo(filtered[0].category)
-            }
+        if (Array.isArray(productsRes.data)) {
+          setProducts(productsRes.data)
+          if (!foundCategory && productsRes.data.length > 0 && productsRes.data[0].category) {
+            setCategoryInfo(productsRes.data[0].category)
           }
         }
       } catch (error) {
         console.error("Error fetching category data:", error)
       } finally {
-        setLoading(false)
+        if (isMounted) setLoading(false)
       }
     }
     fetchData()
+    return () => { isMounted = false }
   }, [categorySlug])
 
   const filteredProducts = useMemo(() => {

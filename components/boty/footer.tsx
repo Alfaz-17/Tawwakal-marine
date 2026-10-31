@@ -8,9 +8,18 @@ import { useEffect, useState } from "react"
 import api from "@/lib/api"
 import TawakkalBackground from "@/components/TawakkalBackground"
 
+const DEFAULT_FOOTER_CATEGORIES = [
+  { name: "PLC Systems & Modules", slug: "plc-systems" },
+  { name: "Variable Frequency Drives (VFD)", slug: "vfd-drives" },
+  { name: "HMI & Operator Panels", slug: "hmi-panels" },
+  { name: "Engine Room Controls & AMS", slug: "engine-room-controls" },
+  { name: "Bridge Navigation & Telecom", slug: "bridge-navigation" },
+  { name: "Marine Radar Systems", slug: "marine-radar" },
+]
+
 export function Footer() {
   const pathname = usePathname()
-  const [categories, setCategories] = useState<any[]>([])
+  const [categories, setCategories] = useState<any[]>(DEFAULT_FOOTER_CATEGORIES)
   
   useEffect(() => {
     const fetchCategories = async () => {

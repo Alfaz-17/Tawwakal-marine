@@ -23,9 +23,22 @@ const CORE_SECTORS = [
   { id: "Marine Automation", label: "Marine", icon: Anchor }
 ]
 
+const DEFAULT_CATEGORIES: CategoryItem[] = [
+  { name: "PLC Systems & Modules", slug: "plc-systems", coreCategory: "Industrial Automation", image: "/categories/plc-systems.png" },
+  { name: "Variable Frequency Drives (VFD)", slug: "vfd-drives", coreCategory: "Industrial Automation", image: "/categories/vfd-drives.png" },
+  { name: "HMI & Operator Panels", slug: "hmi-panels", coreCategory: "Industrial Automation", image: "/categories/hmi-panels.png" },
+  { name: "Engine Room Controls & AMS", slug: "engine-room-controls", coreCategory: "Marine Automation", image: "/categories/marine-automation.png" },
+  { name: "Bridge Navigation & Telecom", slug: "bridge-navigation", coreCategory: "Marine Automation", image: "/categories/telecom-and-communication.png" },
+  { name: "Marine Radar Systems", slug: "marine-radar", coreCategory: "Marine Automation", image: "/categories/radar.png" },
+  { name: "Oil Mist Detectors (OMD)", slug: "oil-mist-detectors", coreCategory: "Marine Automation", image: "/categories/oil-mist-detector.png" },
+  { name: "Circuit Breakers & Switchgear", slug: "circuit-breakers", coreCategory: "Industrial Automation", image: "/categories/circuit-breakers.png" },
+  { name: "Pressure & Level Transmitters", slug: "transmitters", coreCategory: "Marine Automation", image: "/categories/transmitter.png" },
+  { name: "Control Valves & Actuators", slug: "control-valves", coreCategory: "Marine Automation", image: "/categories/control-valve.png" },
+]
+
 export function CategorySection() {
-  const [categories, setCategories] = useState<CategoryItem[]>([])
-  const [loading, setLoading] = useState(true)
+  const [categories, setCategories] = useState<CategoryItem[]>(DEFAULT_CATEGORIES)
+  const [loading, setLoading] = useState(false)
   const [selectedSector, setSelectedSector] = useState("All")
 
   useEffect(() => {

@@ -1,8 +1,8 @@
-
 import { NextResponse } from 'next/server';
 import connectToDatabase from '@/lib/db';
 import { Category } from '@/lib/models';
 import { getSession } from '@/lib/auth';
+import { invalidateCache } from '@/lib/cache';
 
 export async function DELETE(
   req: Request,
@@ -22,6 +22,7 @@ export async function DELETE(
       return NextResponse.json({ error: 'Category not found' }, { status: 404 });
     }
 
+    invalidateCache('categories');
     return NextResponse.json({ message: 'Category deleted successfully' });
   } catch (error) {
     console.error('Category DELETE error:', error);

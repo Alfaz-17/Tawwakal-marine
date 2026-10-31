@@ -4,6 +4,7 @@ import { Product } from '@/lib/models';
 import { getSession } from '@/lib/auth';
 import { revalidatePath } from 'next/cache';
 import { isValidObjectId } from 'mongoose';
+import { getCache, setCache, invalidateCache } from '@/lib/cache';
 
 export async function GET(
   req: Request,
@@ -11,20 +12,38 @@ export async function GET(
 ) {
   try {
     const { id } = await params;
+    const cacheKey = `product:${id}`;
+    const cachedProduct = getCache(cacheKey);
+    if (cachedProduct) {
+      return NextResponse.json(cachedProduct, {
+        headers: {
+          'Cache-Control': 'public, s-maxage=120, stale-while-revalidate=300',
+          'X-Cache': 'HIT',
+        },
+      });
+    }
+
     await connectToDatabase();
     
     let product;
     if (isValidObjectId(id)) {
-      product = await Product.findById(id).populate('category');
+      product = await Product.findById(id).populate('category').populate('brand').lean();
     } else {
-      product = await Product.findOne({ slug: id }).populate('category');
+      product = await Product.findOne({ slug: id }).populate('category').populate('brand').lean();
     }
     
     if (!product) {
       return NextResponse.json({ error: 'Product not found' }, { status: 404 });
     }
 
-    return NextResponse.json(product);
+    setCache(cacheKey, product, 180); // 3 minutes
+
+    return NextResponse.json(product, {
+      headers: {
+        'Cache-Control': 'public, s-maxage=120, stale-while-revalidate=300',
+        'X-Cache': 'MISS',
+      },
+    });
   } catch (error) {
     console.error('Product GET error:', error);
     return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
@@ -54,6 +73,9 @@ export async function DELETE(
     if (!deletedProduct) {
       return NextResponse.json({ error: 'Product not found' }, { status: 404 });
     }
+
+    invalidateCache('product');
+    invalidateCache('products');
 
     // Revalidate paths for SEO
     revalidatePath('/products');
@@ -90,6 +112,9 @@ export async function PUT(
     if (!updatedProduct) {
       return NextResponse.json({ error: 'Product not found' }, { status: 404 });
     }
+
+    invalidateCache('product');
+    invalidateCache('products');
 
     // Revalidate paths for SEO
     revalidatePath('/products');
