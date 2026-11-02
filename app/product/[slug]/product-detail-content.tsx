@@ -232,25 +232,20 @@ export default function ProductDetailContent({ slug }: { slug: string }) {
                 {product.title}
               </h1>
 
-              {/* Part Number & Price / RFQ Summary */}
-              <div className="flex flex-wrap items-center gap-4 py-2 border-y border-[#E2E8F0] my-3">
+              {/* Part Number & Pricing / RFQ Summary */}
+              <div className="flex flex-wrap items-center gap-4 py-2.5 border-y border-[#E2E8F0] my-3">
                 {product.sku && (
                   <div className="text-xs">
                     <span className="text-slate-500 font-semibold uppercase tracking-wider">Part Number: </span>
                     <span className="font-mono font-black text-[#061D45] text-sm bg-slate-100 px-2 py-0.5 rounded">{product.sku}</span>
                   </div>
                 )}
-                {product.price && product.price > 0 ? (
-                  <div className="text-xs">
-                    <span className="text-slate-500 font-semibold uppercase tracking-wider">Commercial Price: </span>
-                    <span className="font-sans font-black text-emerald-600 text-base">${product.price.toFixed(2)} USD</span>
-                  </div>
-                ) : (
-                  <div className="text-xs">
-                    <span className="text-slate-500 font-semibold uppercase tracking-wider">Pricing: </span>
-                    <span className="font-sans font-bold text-[#0095A8]">B2B Wholesale / Fast Proforma RFQ</span>
-                  </div>
-                )}
+                <div className="text-xs flex items-center gap-1.5">
+                  <span className="text-slate-500 font-semibold uppercase tracking-wider">Pricing: </span>
+                  <span className="font-sans font-extrabold text-[#0095A8] bg-[#0095A8]/10 px-2.5 py-0.5 rounded-full text-[11px] uppercase tracking-wide">
+                    Available On Request · B2B RFQ
+                  </span>
+                </div>
               </div>
 
               {/* Quick Action Buttons: WhatsApp & Direct Call */}
