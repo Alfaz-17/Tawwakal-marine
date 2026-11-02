@@ -5,16 +5,35 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       {
         userAgent: '*',
-        allow: ['/', '/api/feed/'],
-        disallow: ['/admin/', '/checkout', '/account', '/cart', '/api/auth/'],
+        allow: [
+          '/',
+          '/products',
+          '/product/',
+          '/brands',
+          '/brand/',
+          '/about',
+          '/contact',
+          '/services',
+          '/blog',
+          '/api/feed/',
+        ],
+        disallow: [
+          '/admin/',
+          '/api/auth/',
+          '/checkout',
+          '/account',
+          '/cart',
+        ],
       },
       {
         userAgent: 'Googlebot-Image',
-        allow: '/',
+        allow: ['/', '/*.png$', '/*.jpg$', '/*.webp$', '/*.svg$'],
       },
     ],
     sitemap: [
       'https://tawwakalautomation.com/sitemap.xml',
+      'https://tawwakalautomation.com/image-sitemap.xml',
     ],
+    host: 'https://tawwakalautomation.com',
   }
 }

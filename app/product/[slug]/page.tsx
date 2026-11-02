@@ -23,10 +23,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
     const brandName = product.brandName || (product.brand?.name) || ''
     const categoryName = product.category?.name || 'Marine & Industrial Equipment'
+    const partNumber = product.partNumber || product.modelNumber || product.sku || ''
     
-    const titleParts = [product.title]
-    if (brandName) titleParts.push(`by ${brandName}`)
-    titleParts.push(categoryName)
+    const titleParts = []
+    if (partNumber && !product.title.includes(partNumber)) {
+      titleParts.push(partNumber)
+    }
+    titleParts.push(product.title)
+    if (brandName && !product.title.toLowerCase().includes(brandName.toLowerCase())) {
+      titleParts.push(`by ${brandName}`)
+    }
     titleParts.push('Tawwakal Automation')
     
     const title = product.metaTitle || titleParts.join(' | ')
@@ -35,16 +41,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       ? (product.description.length > 155 
           ? product.description.substring(0, 152) + "..." 
           : product.description)
-      : `${product.title}${brandName ? ` by ${brandName}` : ''}. ${categoryName} supplied by Tawwakal Automation. Request a quotation or submit technical enquiry.`)
+      : `${product.title}${brandName ? ` by ${brandName}` : ''}${partNumber ? ` (Part #${partNumber})` : ''}. In stock, bench tested, and ready for express worldwide air dispatch from Tawwakal Automation Alang hub. Request an instant quote.`)
 
-    const ogImage = product.image ? (product.image.startsWith('http') ? product.image : `https://tawwakalautomation.com${product.image}`) : 'https://tawwakalautomation.com/placeholder.jpg'
+    const ogImage = product.image ? (product.image.startsWith('http') ? product.image : `https://tawwakalautomation.com${product.image}`) : 'https://tawwakalautomation.com/og-image.png'
 
     const keywords: string[] = [
       product.title,
+      partNumber,
+      product.modelNumber,
+      product.sku,
       ...(product.keywords || []),
       categoryName,
       brandName,
       'Tawwakal Automation',
+      `${partNumber} price`,
+      `${partNumber} datasheet`,
+      `${partNumber} supplier`,
       'marine spare parts',
       'ship spare parts',
       'industrial automation',

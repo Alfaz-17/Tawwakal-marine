@@ -4,34 +4,39 @@ import ProductsContent from './products-content'
 import { MarineLoader } from '@/components/common/marine-loader'
 
 export const metadata: Metadata = {
-  title: 'Marine & Industrial Equipment Products | Tawwakal Automation',
-  description: 'Explore our catalog of marine equipment, ship spare parts, industrial automation systems, electrical and mechanical components. Sourcing assistance and B2B quotations.',
+  title: 'Industrial & Marine Automation Equipment Catalog | Tawwakal Automation',
+  description: 'Browse thousands of verified industrial and marine automation spare parts: PLCs, HMIs, VFD inverters, circuit breakers, power supplies, and marine electronics. 100% bench tested with 12-month warranty.',
   keywords: [
-    'Tawwakal Automation products',
-    'marine spare parts',
-    'ship spare parts',
-    'industrial automation products',
-    'ship engine parts',
-    'marine electronics',
-    'marine equipment supplier',
-    'industrial pumps and valves',
-    'PLC modules',
-    'electrical components',
+    'industrial automation catalog',
+    'marine spare parts catalog',
+    'PLC modules in stock',
+    'VFD inverters supplier',
+    'HMI operator panels',
+    'circuit breakers',
+    'marine electronics stockist',
+    'Alang ship breaking spare parts',
+    'Tawwakal Automation inventory',
   ],
   alternates: {
-    canonical: '/products',
+    canonical: 'https://tawwakalautomation.com/products',
   },
   openGraph: {
-    title: 'Marine & Industrial Equipment Products | Tawwakal Automation',
-    description: 'B2B catalog of marine equipment, ship spare parts, industrial automation systems, and electrical/mechanical components.',
+    title: 'Industrial & Marine Automation Equipment Catalog | Tawwakal Automation',
+    description: 'Explore verified automation hardware: PLCs, drives, control units, and marine electronics with express global shipping from Alang hub.',
     url: 'https://tawwakalautomation.com/products',
     type: 'website',
     images: [{
-      url: 'https://tawwakalautomation.com/products-hero.png',
+      url: 'https://tawwakalautomation.com/og-image.png',
       width: 1200,
       height: 630,
-      alt: 'Tawwakal Automation - Product Catalog',
+      alt: 'Tawwakal Automation Product Catalog',
     }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Industrial & Marine Automation Products | Tawwakal Automation',
+    description: 'Browse tested PLCs, drives, and marine spares ready for immediate worldwide dispatch.',
+    images: ['https://tawwakalautomation.com/og-image.png'],
   },
 }
 

@@ -5,12 +5,28 @@ export default function StructuredData() {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Tawwakal Automation",
-    "alternateName": ["Tawwakal Marine & Industrial Supply", "Tawwakal Automation Alang"],
+    "alternateName": [
+      "Tawwakal Marine & Industrial Supply",
+      "Tawwakal Automation Alang",
+      "Tawwakal Marine Automation"
+    ],
     "url": "https://tawwakalautomation.com",
-    "logo": "https://tawwakalautomation.com/icon.svg",
+    "logo": "https://tawwakalautomation.com/icon-512.png",
+    "image": "https://tawwakalautomation.com/og-image.png",
     "description": "Global stockist and exporter of marine and industrial automation equipment, PLCs, HMIs, VFD drives, navigation electronics, and genuine surplus spare parts.",
     "email": "sales@tawwakalautomation.com",
     "telephone": "+916356547827",
+    "sameAs": [
+      "https://wa.me/916356547827"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Near Alang Ship Breaking Yard Road, Kumbharwada",
+      "addressLocality": "Bhavnagar",
+      "addressRegion": "Gujarat",
+      "postalCode": "364001",
+      "addressCountry": "IN"
+    },
     "contactPoint": [
       {
         "@type": "ContactPoint",
@@ -19,23 +35,34 @@ export default function StructuredData() {
         "email": "sales@tawwakalautomation.com",
         "areaServed": "Worldwide",
         "availableLanguage": ["English", "Hindi", "Gujarati"]
+      },
+      {
+        "@type": "ContactPoint",
+        "contactType": "customer service",
+        "telephone": "+916356547827",
+        "email": "sales@tawwakalautomation.com",
+        "areaServed": "Worldwide"
       }
     ]
   };
 
   const localBusinessData = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": ["LocalBusiness", "WholesaleStore"],
     "name": "Tawwakal Automation",
-    "image": "https://tawwakalautomation.com/hero-bg.webp",
+    "image": "https://tawwakalautomation.com/og-image.png",
     "url": "https://tawwakalautomation.com",
     "telephone": "+916356547827",
     "email": "sales@tawwakalautomation.com",
-    "priceRange": "$$",
+    "priceRange": "$$$$",
+    "currenciesAccepted": "USD, EUR, GBP, AED, INR",
+    "paymentAccepted": "Bank Wire Transfer, TT, LC",
     "address": {
       "@type": "PostalAddress",
+      "streetAddress": "Near Alang Ship Breaking Yard Road, Kumbharwada",
       "addressLocality": "Bhavnagar",
       "addressRegion": "Gujarat",
+      "postalCode": "364001",
       "addressCountry": "IN"
     },
     "geo": {
@@ -48,7 +75,7 @@ export default function StructuredData() {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
         "opens": "09:00",
-        "closes": "19:00"
+        "closes": "20:00"
       }
     ]
   };
@@ -62,7 +89,8 @@ export default function StructuredData() {
     "publisher": {
       "@type": "Organization",
       "name": "Tawwakal Automation",
-      "url": "https://tawwakalautomation.com"
+      "url": "https://tawwakalautomation.com",
+      "logo": "https://tawwakalautomation.com/icon-512.png"
     },
     "potentialAction": {
       "@type": "SearchAction",

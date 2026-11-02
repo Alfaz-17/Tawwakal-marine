@@ -11,8 +11,8 @@ import { HomeContactSection } from "@/components/boty/home-contact-section"
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Tawwakal Automation | Marine & Industrial Equipment Supplier',
-  description: 'Global supplier and stockist of industrial and marine automation parts based in Bhavnagar/Alang. PLCs, HMIs, VFD drives, navigation electronics, and marine spares.',
+  title: 'Tawwakal Automation | Global Supplier & Stockist of Industrial & Marine Automation Parts',
+  description: 'Global supplier and stockist of industrial and marine automation parts based in Bhavnagar/Alang. 100% bench-tested PLCs, HMIs, VFD drives, navigation electronics, and marine spares with 24-48h express worldwide air dispatch.',
   keywords: [
     'Tawwakal Automation',
     'marine equipment supplier',
@@ -24,10 +24,11 @@ export const metadata: Metadata = {
     'Siemens S7-300',
     'Danfoss VLT drives',
     'Pro-face HMI',
-    'marine engineering supplies'
+    'marine engineering supplies',
+    'B2B automation exporter India'
   ],
   alternates: {
-    canonical: '/',
+    canonical: 'https://tawwakalautomation.com',
   },
   openGraph: {
     title: 'Tawwakal Automation | Global Supplier & Stockist of Industrial & Marine Automation Parts',
@@ -35,11 +36,17 @@ export const metadata: Metadata = {
     url: 'https://tawwakalautomation.com',
     type: 'website',
     images: [{
-      url: 'https://tawwakalautomation.com/hero-marine.png',
+      url: 'https://tawwakalautomation.com/og-image.png',
       width: 1200,
       height: 630,
       alt: 'Tawwakal Automation - Global Supplier & Stockist of Industrial & Marine Automation Parts',
     }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Tawwakal Automation | Global Marine & Industrial Automation Stockist',
+    description: 'Tested PLCs, HMIs, VFD drives, and marine spares in stock in Bhavnagar / Alang. Express worldwide air dispatch.',
+    images: ['https://tawwakalautomation.com/og-image.png'],
   },
 }
 

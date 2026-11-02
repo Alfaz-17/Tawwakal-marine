@@ -34,6 +34,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: `Tested ${displayName} automation and marine spares in stock in Bhavnagar / Alang. Express worldwide air dispatch.`,
       url: `https://tawwakalautomation.com/brand/${brandName}`,
       type: 'website',
+      siteName: 'Tawwakal Automation',
+      images: [{
+        url: 'https://tawwakalautomation.com/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: `${displayName} Automation & Marine Spares - Tawwakal Automation`,
+      }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${displayName} Spare Parts, Drives & Modules | Tawwakal Automation`,
+      description: `Tested ${displayName} automation and marine spares in stock. Express worldwide dispatch.`,
+      images: ['https://tawwakalautomation.com/og-image.png'],
     },
     robots: {
       index: true,

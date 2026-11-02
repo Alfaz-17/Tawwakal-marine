@@ -22,28 +22,46 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
     const categoryName = categoryObj?.name || decodedCategory.replace(/-/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase())
     
-    const title = `${categoryName} | Tawwakal Automation`
-    const description = `B2B supply and sourcing for ${categoryName}. Review specifications, equipment availability, and request a quotation from Tawwakal Automation.`
-    const keywords = [categoryName, 'Tawwakal Automation', `${categoryName} supplier`, 'marine equipment', 'industrial equipment']
+    const title = `${categoryName} Supplier & Stockist | Tawwakal Automation`
+    const description = `Global supplier and stockist of genuine ${categoryName}. Verified surplus, used & new marine & industrial parts with 100% bench testing, technical warranty, and worldwide express air dispatch from Alang hub.`
+    const keywords = [
+      categoryName,
+      `${categoryName} supplier`,
+      `${categoryName} stockist`,
+      `${categoryName} used`,
+      `${categoryName} surplus`,
+      `${categoryName} spare parts`,
+      'Tawwakal Automation',
+      'marine automation spares',
+      'industrial equipment India',
+      'Alang ship breaking spare parts',
+    ]
 
     return {
       title,
       description,
       keywords,
       alternates: {
-        canonical: `/products/${category}`,
+        canonical: `https://tawwakalautomation.com/products/${category}`,
       },
       openGraph: {
         title,
         description,
         url: `https://tawwakalautomation.com/products/${category}`,
         type: 'website',
+        siteName: 'Tawwakal Automation',
         images: [{
-          url: categoryObj?.image || 'https://tawwakalautomation.com/products-hero.png',
+          url: categoryObj?.image ? (categoryObj.image.startsWith('http') ? categoryObj.image : `https://tawwakalautomation.com${categoryObj.image}`) : 'https://tawwakalautomation.com/og-image.png',
           width: 1200,
           height: 630,
           alt: `${categoryName} - Tawwakal Automation`,
         }],
+      },
+      twitter: {
+        card: 'summary_large_image',
+        title,
+        description,
+        images: [categoryObj?.image ? (categoryObj.image.startsWith('http') ? categoryObj.image : `https://tawwakalautomation.com${categoryObj.image}`) : 'https://tawwakalautomation.com/og-image.png'],
       },
       robots: {
         index: true,

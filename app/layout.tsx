@@ -12,29 +12,31 @@ import { AiChatWidget } from "@/components/chat/ai-chat-widget"
 export const metadata: Metadata = {
   metadataBase: new URL('https://tawwakalautomation.com'),
   title: {
-    default: 'Tawwakal Automation | Marine & Industrial Equipment Supplier',
+    default: 'Tawwakal Automation | Marine & Industrial Automation Equipment Supplier',
     template: '%s | Tawwakal Automation'
   },
-  description: 'Tawwakal Automation supports marine, shipping, engineering, and industrial businesses with marine equipment, ship spare parts, industrial automation products, electrical and mechanical components, and supply assistance.',
+  description: 'Global stockist & exporter of marine and industrial automation spare parts based in Bhavnagar / Alang. Tested PLCs, HMIs, VFD drives, circuit breakers, and navigation electronics with express worldwide dispatch.',
   keywords: [
     'Tawwakal Automation',
     'marine equipment supplier',
-    'ship spare parts',
+    'ship spare parts supplier',
     'industrial automation products',
-    'electrical and mechanical components',
-    'industrial control systems',
-    'marine spare parts supplier',
-    'ship automation systems',
-    'industrial equipment sourcing',
-    'marine engineering supplies',
-    'commercial vessel parts',
-    'PLC automation spares'
+    'marine automation spare parts',
+    'Alang ship breaking spare parts',
+    'Siemens PLC spares',
+    'ABB drives stockist',
+    'Danfoss marine inverters',
+    'used tested industrial electronics',
+    'ship automation exporter India',
+    'Bhavnagar automation stockist',
+    'marine navigation equipment'
   ],
-  authors: [{ name: 'Tawwakal Automation' }],
+  authors: [{ name: 'Tawwakal Automation', url: 'https://tawwakalautomation.com' }],
   creator: 'Tawwakal Automation',
   publisher: 'Tawwakal Automation',
+  category: 'Industrial & Marine Automation Equipment',
   alternates: {
-    canonical: '/',
+    canonical: 'https://tawwakalautomation.com',
   },
   robots: {
     index: true,
@@ -53,29 +55,30 @@ export const metadata: Metadata = {
     url: 'https://tawwakalautomation.com',
     siteName: 'Tawwakal Automation',
     title: 'Tawwakal Automation | Marine & Industrial Equipment Supplier',
-    description: 'B2B supplier of marine equipment, ship spare parts, industrial automation systems, and electrical/mechanical components.',
+    description: 'B2B stockist & global exporter of marine and industrial automation parts: PLCs, HMIs, VFD drives, sensors, and marine electronics sourced directly from Alang hub.',
     images: [
       {
-        url: '/hero-bg.webp',
+        url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Tawwakal Automation - Marine & Industrial Equipment Supply',
+        alt: 'Tawwakal Automation - Global Marine & Industrial Automation Stockist',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Tawwakal Automation | Marine & Industrial Equipment Supplier',
-    description: 'B2B supply partner for marine equipment, ship spares, and industrial automation.',
+    description: 'Global B2B supplier of verified marine equipment, ship spares, and industrial automation electronics.',
     images: ['/og-image.png'],
   },
   icons: {
     icon: [
-      { url: '/favicon.ico' },
+      { url: '/favicon.ico', sizes: '32x32' },
       { url: '/icon.svg', type: 'image/svg+xml' },
     ],
+    shortcut: '/favicon.ico',
     apple: [
-      { url: '/apple-icon.png' },
+      { url: '/apple-icon.png', sizes: '180x180', type: 'image/png' },
     ],
   },
 }

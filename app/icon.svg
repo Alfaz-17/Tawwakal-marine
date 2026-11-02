@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#04122E" />
+      <stop offset="100%" stop-color="#0B1E48" />
+    </linearGradient>
+    <linearGradient id="tealGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00D2DE" />
+      <stop offset="50%" stop-color="#0095A8" />
+      <stop offset="100%" stop-color="#006C78" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Base App Background with Rounded Corners -->
+  <rect width="512" height="512" rx="112" fill="url(#bgGrad)" />
+
+  <!-- Outer Precision Ring (Marine Automation Dial) -->
+  <circle cx="256" cy="256" r="216" stroke="url(#tealGrad)" stroke-width="12" fill="none" opacity="0.85" />
+  
+  <!-- Compass Cardinal Ticks -->
+  <line x1="256" y1="28" x2="256" y2="52" stroke="#00D2DE" stroke-width="8" stroke-linecap="round" />
+  <line x1="256" y1="460" x2="256" y2="484" stroke="#00D2DE" stroke-width="8" stroke-linecap="round" />
+  <line x1="28" y1="256" x2="52" y2="256" stroke="#00D2DE" stroke-width="8" stroke-linecap="round" />
+  <line x1="460" y1="256" x2="484" y2="256" stroke="#00D2DE" stroke-width="8" stroke-linecap="round" />
+
+  <!-- Inner Cyber Tech Arc -->
+  <circle cx="256" cy="256" r="182" stroke="#00D2DE" stroke-width="3" stroke-dasharray="14 10" fill="none" opacity="0.4" />
+
+  <!-- Central Monogram Icon "T" and "A" combined with Anchor / Marine Gear geometry -->
+  <!-- Stylized "T" Crossbar -->
+  <path d="M128 152 H384" stroke="url(#tealGrad)" stroke-width="36" stroke-linecap="round" />
+  <path d="M256 152 V368" stroke="url(#tealGrad)" stroke-width="36" stroke-linecap="round" />
+
+  <!-- Stylized "A" Triangle Bridge & Wings -->
+  <path d="M172 376 L256 200 L340 376" stroke="#FFFFFF" stroke-width="30" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M198 320 H314" stroke="url(#tealGrad)" stroke-width="24" stroke-linecap="round" />
+
+  <!-- Anchor Base Crescent (Marine Foundation) -->
+  <path d="M168 396 C210 432, 302 432, 344 396" stroke="url(#tealGrad)" stroke-width="26" stroke-linecap="round" fill="none" />
+  
+  <!-- Central Tech Pulse Node -->
+  <circle cx="256" cy="256" r="14" fill="#00D2DE" filter="url(#glow)" />
+</svg>
