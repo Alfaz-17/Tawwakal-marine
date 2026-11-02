@@ -14,7 +14,7 @@ export const FloatingWhatsappButton = () => {
       whileTap={{ scale: 0.95 }}
     >
       <a
-        href="https://wa.me/?text=Hello%20Tawwakal%20Automation%2C%20I%20have%20an%20equipment%20requirement"
+        href="https://wa.me/916356547827?text=Hello%20Tawwakal%20Automation%2C%20I%20have%20an%20industrial%2Fmarine%20equipment%20requirement"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Direct Enquiry via WhatsApp"

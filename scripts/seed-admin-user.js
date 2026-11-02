@@ -49,3 +49,4 @@ seedAdmin().catch(err => {
   console.error('Error seeding admin:', err);
   process.exit(1);
 });
+
