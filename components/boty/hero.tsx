@@ -38,11 +38,11 @@ export function Hero() {
             transition={{ duration: 0.35 }}
             className="text-[9.5px] sm:text-[11px] font-extrabold tracking-[0.2em] text-[#008C95] uppercase mb-1.5 sm:mb-2 flex items-center gap-1.5 sm:gap-2"
           >
-            <span>INDUSTRIAL</span>
+            <span>TAWWAKAL MARINE</span>
             <span className="text-[#008C95]/50">•</span>
-            <span>MARINE</span>
+            <span>INDUSTRIAL AUTOMATION</span>
             <span className="text-[#008C95]/50">•</span>
-            <span>AUTOMATION</span>
+            <span>ALANG EXPORT HUB</span>
           </motion.div>
 
           {/* Main Headline */}
@@ -73,7 +73,7 @@ export function Hero() {
             transition={{ duration: 0.45, delay: 0.2 }}
             className="text-[11px] sm:text-[13px] text-[#202A3A]/85 max-w-lg leading-relaxed mb-3.5 sm:mb-5 font-normal line-clamp-2 sm:line-clamp-none"
           >
-            Explore verified automation modules, control systems, electrical equipment, and genuine marine spare parts sourced directly from Alang hub.
+            Tawwakal Marine supplies bench-tested automation modules, PLCs, VFD inverters, navigation systems, and genuine ship spares sourced directly from the Bhavnagar &amp; Alang hub.
           </motion.p>
 
           {/* Action Buttons - Compact 2-button row on mobile */}

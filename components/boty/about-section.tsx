@@ -74,7 +74,7 @@ export function AboutSection() {
           {/* Right Column: Narrative & Technical Strengths */}
           <div className="lg:col-span-6 space-y-3.5 sm:space-y-5">
             <div className="inline-flex items-center gap-2 text-[10px] sm:text-[11px] font-extrabold uppercase tracking-[0.2em] text-[#0095A8]">
-              <span>ABOUT TAWWAKAL AUTOMATION</span>
+              <span>ABOUT TAWWAKAL MARINE &amp; AUTOMATION</span>
             </div>
 
             <h2 className="font-sans font-black text-xl sm:text-3xl lg:text-4xl text-[#061D45] uppercase tracking-tight leading-tight">
@@ -82,7 +82,7 @@ export function AboutSection() {
             </h2>
 
             <p className="text-[11px] sm:text-sm text-foreground/80 leading-relaxed">
-              Based at the world-renowned maritime trade corridor of Bhavnagar and Alang, <strong>Tawwakal Automation</strong> specializes in technical identification, bench-testing, and global supply of marine control equipment and industrial automation spares.
+              Based at the world-renowned maritime trade corridor of Bhavnagar and Alang, <strong>Tawwakal Marine (Tawwakal Automation)</strong> specializes in technical identification, bench-testing, and global supply of marine control equipment, ship navigation electronics, and industrial automation spares.
             </p>
 
             <p className="text-[11px] sm:text-sm text-muted-foreground leading-relaxed">

@@ -11,9 +11,13 @@ import { HomeContactSection } from "@/components/boty/home-contact-section"
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Tawwakal Automation | Global Supplier & Stockist of Industrial & Marine Automation Parts',
-  description: 'Global supplier and stockist of industrial and marine automation parts based in Bhavnagar/Alang. 100% bench-tested PLCs, HMIs, VFD drives, navigation electronics, and marine spares with 24-48h express worldwide air dispatch.',
+  title: 'Tawwakal Marine & Automation | Global Marine Equipment, Ship Spares & Industrial Automation',
+  description: 'Tawwakal Marine is a leading global supplier and stockist of marine equipment, ship spare parts, and industrial automation based in Bhavnagar/Alang. 100% bench-tested PLCs, HMIs, VFD drives, navigation electronics, and marine spares with 24-48h express worldwide air dispatch.',
   keywords: [
+    'Tawwakal Marine',
+    'Tawwakal Marine Automation',
+    'Tawwakal Marine Bhavnagar',
+    'Tawwakal Marine Alang',
     'Tawwakal Automation',
     'marine equipment supplier',
     'ship spare parts',
@@ -31,20 +35,20 @@ export const metadata: Metadata = {
     canonical: 'https://tawwakalautomation.com',
   },
   openGraph: {
-    title: 'Tawwakal Automation | Global Supplier & Stockist of Industrial & Marine Automation Parts',
-    description: 'B2B supplier of marine equipment, ship spare parts, industrial automation products, and electrical/mechanical components.',
+    title: 'Tawwakal Marine & Automation | Global Marine Equipment & Ship Spares',
+    description: 'Tawwakal Marine: B2B supplier of marine equipment, ship spare parts, industrial automation products, and electrical/mechanical components from Alang.',
     url: 'https://tawwakalautomation.com',
     type: 'website',
     images: [{
       url: 'https://tawwakalautomation.com/og-image.png',
       width: 1200,
       height: 630,
-      alt: 'Tawwakal Automation - Global Supplier & Stockist of Industrial & Marine Automation Parts',
+      alt: 'Tawwakal Marine & Automation - Global Marine Equipment & Industrial Automation',
     }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Tawwakal Automation | Global Marine & Industrial Automation Stockist',
+    title: 'Tawwakal Marine & Automation | Marine Equipment & Ship Spares',
     description: 'Tested PLCs, HMIs, VFD drives, and marine spares in stock in Bhavnagar / Alang. Express worldwide air dispatch.',
     images: ['https://tawwakalautomation.com/og-image.png'],
   },

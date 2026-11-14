@@ -12,11 +12,15 @@ import { AiChatWidget } from "@/components/chat/ai-chat-widget"
 export const metadata: Metadata = {
   metadataBase: new URL('https://tawwakalautomation.com'),
   title: {
-    default: 'Tawwakal Automation | Marine & Industrial Automation Equipment Supplier',
-    template: '%s | Tawwakal Automation'
+    default: 'Tawwakal Marine & Automation | Marine Equipment & Industrial Automation Supplier',
+    template: '%s | Tawwakal Marine & Automation'
   },
-  description: 'Global stockist & exporter of marine and industrial automation spare parts based in Bhavnagar / Alang. Tested PLCs, HMIs, VFD drives, circuit breakers, and navigation electronics with express worldwide dispatch.',
+  description: 'Tawwakal Marine (Tawwakal Automation) is a global stockist & exporter of marine equipment, ship spare parts, and industrial automation based in Bhavnagar / Alang. Tested PLCs, HMIs, VFD drives, circuit breakers, and navigation electronics with express worldwide dispatch.',
   keywords: [
+    'Tawwakal Marine',
+    'Tawwakal Marine Automation',
+    'Tawwakal Marine Bhavnagar',
+    'Tawwakal Marine Alang',
     'Tawwakal Automation',
     'marine equipment supplier',
     'ship spare parts supplier',

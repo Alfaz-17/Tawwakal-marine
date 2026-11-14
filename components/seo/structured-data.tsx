@@ -4,11 +4,14 @@ export default function StructuredData() {
   const organizationData = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Tawwakal Automation",
+    "name": "Tawwakal Marine & Automation",
     "alternateName": [
+      "Tawwakal Marine",
+      "Tawwakal Marine Automation",
+      "Tawwakal Automation",
+      "Tawwakal Marine Spares",
       "Tawwakal Marine & Industrial Supply",
-      "Tawwakal Automation Alang",
-      "Tawwakal Marine Automation"
+      "Tawwakal Automation Alang"
     ],
     "url": "https://tawwakalautomation.com",
     "logo": "https://tawwakalautomation.com/icon-512.png",
@@ -49,7 +52,8 @@ export default function StructuredData() {
   const localBusinessData = {
     "@context": "https://schema.org",
     "@type": ["LocalBusiness", "WholesaleStore"],
-    "name": "Tawwakal Automation",
+    "name": "Tawwakal Marine & Automation Spares",
+    "alternateName": "Tawwakal Marine",
     "image": "https://tawwakalautomation.com/og-image.png",
     "url": "https://tawwakalautomation.com",
     "telephone": "+916356547827",
@@ -83,12 +87,13 @@ export default function StructuredData() {
   const websiteData = {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "Tawwakal Automation",
+    "name": "Tawwakal Marine & Automation",
+    "alternateName": "Tawwakal Marine",
     "url": "https://tawwakalautomation.com",
     "description": "B2B supplier of marine equipment, ship spare parts, industrial automation products, and electrical and mechanical components.",
     "publisher": {
       "@type": "Organization",
-      "name": "Tawwakal Automation",
+      "name": "Tawwakal Marine & Automation",
       "url": "https://tawwakalautomation.com",
       "logo": "https://tawwakalautomation.com/icon-512.png"
     },
@@ -100,6 +105,55 @@ export default function StructuredData() {
       },
       "query-input": "required name=search_term_string"
     }
+  };
+
+  const navigationData = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "itemListElement": [
+      {
+        "@type": "SiteNavigationElement",
+        "position": 1,
+        "name": "Marine Equipment & Ship Spares",
+        "description": "Tested shipboard automation, marine radars, ECDIS, and engine room spares.",
+        "url": "https://tawwakalautomation.com/products"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "position": 2,
+        "name": "Industrial Automation & PLCs",
+        "description": "Siemens, ABB, Danfoss, and Allen-Bradley PLCs, HMIs, and VFD inverters.",
+        "url": "https://tawwakalautomation.com/products"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "position": 3,
+        "name": "OEM Brands Directory",
+        "description": "Browse genuine parts by manufacturer: Furuno, ABB, Siemens, Danfoss, Omron.",
+        "url": "https://tawwakalautomation.com/brands"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "position": 4,
+        "name": "About Tawwakal Marine",
+        "description": "Global exporter of marine and industrial electronics based in Bhavnagar / Alang hub.",
+        "url": "https://tawwakalautomation.com/about"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "position": 5,
+        "name": "Contact & Rapid RFQ Desk",
+        "description": "24/7 technical inquiry and international express air freight quotation.",
+        "url": "https://tawwakalautomation.com/contact"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "position": 6,
+        "name": "Technical Knowledge Base",
+        "description": "Marine equipment troubleshooting guides, obsolete part replacements, and datasheets.",
+        "url": "https://tawwakalautomation.com/blog"
+      }
+    ]
   };
 
   return (
@@ -115,6 +169,10 @@ export default function StructuredData() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(navigationData) }}
       />
     </>
   );

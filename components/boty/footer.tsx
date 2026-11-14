@@ -55,7 +55,7 @@ export function Footer() {
       ]
 
   const companyLinks = [
-    { name: "About Tawwakal", href: "/about" },
+    { name: "About Tawwakal Marine", href: "/about" },
     { name: "Our Services & Capabilities", href: "/services" },
     { name: "Industries Served", href: "/#industries" },
     { name: "Supported Brands", href: "/brands" },
@@ -206,7 +206,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="pt-4 sm:pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-2.5 sm:gap-3 text-[10px] sm:text-[11px] text-white/50 text-center sm:text-left">
           <div>
-            &copy; {new Date().getFullYear()} Tawwakal Automation. All rights reserved.
+            &copy; {new Date().getFullYear()} Tawwakal Marine &amp; Automation. All rights reserved.
           </div>
           <div className="flex items-center gap-4 sm:gap-5">
             <Link href="/privacy" className="hover:text-white transition-colors">
