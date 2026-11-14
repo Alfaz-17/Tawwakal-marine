@@ -6,7 +6,8 @@
     "build": "next build",
     "dev": "next dev",
     "lint": "eslint .",
-    "start": "next start"
+    "start": "next start",
+    "test": "node tests/run-all-tests.mjs"
   },
   "dependencies": {
     "@google/genai": "^1.49.0",
