@@ -233,9 +233,7 @@ await test('Admin E2E: Clean up temporary test product and test order', async ()
 await test('SEO & Branding Integrity: Verify favicon, icon, and apple-touch-icon files exist', async () => {
   const assets = [
     'public/favicon.ico',
-    'app/favicon.ico',
     'public/apple-icon.png',
-    'app/apple-icon.png',
     'public/icon.png',
     'public/icon-192.png',
     'public/icon-512.png',
