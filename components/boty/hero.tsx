@@ -12,24 +12,30 @@ export function Hero() {
       <div className="absolute inset-0 z-0">
         <Image
           src="/hero-marine.png"
-          alt="Tawwakal Automation - Global Supplier & Stockist of Industrial & Marine Automation Parts"
+          alt="Tawwakal Marine &amp; Automation - Global Supplier &amp; Stockist of Industrial &amp; Marine Automation Parts"
           fill
           priority
           quality={95}
           sizes="100vw"
-          className="object-cover object-right lg:object-center select-none"
+          className="object-cover object-[72%_center] sm:object-right lg:object-center select-none"
         />
 
-        {/* Soft White Gradient Guaranteeing High-Contrast Readability across all screen sizes */}
+        {/* Desktop Gradient Mask: Soft left-hand blend only on sm+ screens */}
         <div 
-          className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/75 sm:to-transparent sm:w-[85%] md:w-[65%] lg:w-[50%] xl:w-[46%] z-10" 
+          className="hidden sm:block absolute inset-0 bg-gradient-to-r from-white via-white/95 to-transparent sm:w-[65%] md:w-[55%] lg:w-[48%] xl:w-[45%] z-10" 
+          aria-hidden="true"
+        />
+
+        {/* Mobile Rich Depth: Subtle vignette without ANY whitish washout */}
+        <div 
+          className="sm:hidden absolute inset-0 bg-gradient-to-b from-black/15 via-transparent to-black/20 z-10 pointer-events-none" 
           aria-hidden="true"
         />
       </div>
 
       {/* Foreground Content Container (Fits Cleanly in First Impression / Mobile Viewport) */}
-      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-4 sm:py-8 lg:py-10 flex flex-col justify-center h-full">
-        <div className="w-full md:max-w-xl lg:max-w-2xl xl:max-w-[620px] flex flex-col justify-center my-auto">
+      <div className="relative z-20 max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 w-full py-3.5 sm:py-8 lg:py-10 flex flex-col justify-center h-full">
+        <div className="w-full md:max-w-xl lg:max-w-2xl xl:max-w-[620px] flex flex-col justify-center my-auto bg-white/85 sm:bg-transparent backdrop-blur-md sm:backdrop-blur-none p-4 sm:p-0 rounded-2xl sm:rounded-none border border-white/70 sm:border-0 shadow-[0_8px_32px_rgba(6,29,69,0.12)] sm:shadow-none">
           
           {/* Top Category Label */}
           <motion.div
