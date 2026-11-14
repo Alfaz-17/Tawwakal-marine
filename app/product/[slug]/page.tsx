@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import api from "@/lib/api"
+import { getProductBySlug, getAllProductSlugs } from "@/lib/server-data"
 import ProductDetailContent from './product-detail-content'
 import ProductStructuredData from '@/components/seo/product-structured-data'
 
@@ -13,11 +13,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
   
   try {
-    const { data: product } = await api.get(`/products/${slug}`)
+    const product = await getProductBySlug(slug)
     
     if (!product) {
+      const readableTitle = slug.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())
       return {
-        title: 'Product Not Found | Tawwakal Automation',
+        title: `${readableTitle} | Tawwakal Automation`,
+        description: `Marine and industrial equipment enquiry for ${readableTitle}. Tawwakal Automation.`,
+        keywords: [readableTitle, 'Tawwakal Automation', 'marine equipment', 'spare parts'],
       }
     }
 
@@ -106,12 +109,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export async function generateStaticParams() {
   try {
-    const { data: products } = await api.get('/products')
-    if (!Array.isArray(products)) return []
-    return products.map((product: any) => ({
-      slug: product.slug || product._id,
-    }))
+    const slugs = await getAllProductSlugs()
+    return slugs.map((slug: string) => ({ slug }))
   } catch (error) {
+    console.error('generateStaticParams error in product page:', error)
     return []
   }
 }
@@ -120,14 +121,14 @@ export default async function ProductDetailPage({ params }: Props) {
   const { slug } = await params;
   
   try {
-    const { data: product } = await api.get(`/products/${slug}`);
+    const product = await getProductBySlug(slug)
     
     if (!product) return <ProductDetailContent slug={slug} />;
 
     return (
       <>
         <ProductStructuredData product={product} slug={slug} />
-        <ProductDetailContent slug={slug} />
+        <ProductDetailContent slug={slug} initialProduct={product} />
       </>
     );
   } catch (err) {

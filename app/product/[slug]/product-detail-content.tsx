@@ -11,10 +11,10 @@ import { motion } from "framer-motion"
 import Breadcrumbs from "@/components/seo/breadcrumbs"
 import { ProductCard } from "@/components/product-card"
 
-export default function ProductDetailContent({ slug }: { slug: string }) {
-  const [product, setProduct] = useState<any>(null)
+export default function ProductDetailContent({ slug, initialProduct }: { slug: string; initialProduct?: any }) {
+  const [product, setProduct] = useState<any>(initialProduct || null)
   const [relatedProducts, setRelatedProducts] = useState<any[]>([])
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(!initialProduct)
   const [openAccordion, setOpenAccordion] = useState<string | null>("specs")
   const [lightboxImage, setLightboxImage] = useState<string | null>(null)
   const [selectedImageIndex, setSelectedImageIndex] = useState(0)
@@ -22,16 +22,16 @@ export default function ProductDetailContent({ slug }: { slug: string }) {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        setLoading(true);
-        const { data } = await api.get(`/products/${slug}`);
-        setProduct(data);
+        if (!initialProduct) setLoading(true);
+        const currentData = initialProduct || (await api.get(`/products/${slug}`)).data;
+        if (!initialProduct) setProduct(currentData);
 
-        if (data?.category?._id || data?.category) {
-          const catId = data.category._id || data.category;
+        if (currentData?.category?._id || currentData?.category) {
+          const catId = currentData.category._id || currentData.category;
           const relatedRes = await api.get(`/products?category=${catId}`);
           if (Array.isArray(relatedRes.data)) {
             const related = relatedRes.data
-              .filter((p: any) => p._id !== data._id)
+              .filter((p: any) => p._id !== currentData._id)
               .slice(0, 4);
             setRelatedProducts(related);
           }
@@ -44,7 +44,7 @@ export default function ProductDetailContent({ slug }: { slug: string }) {
     };
 
     if (slug) fetchProduct();
-  }, [slug]);
+  }, [slug, initialProduct]);
 
   useEffect(() => {
     if (product && product.slug && slug === product._id) {

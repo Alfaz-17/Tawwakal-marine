@@ -36,12 +36,29 @@ export function FAQSection() {
     }
   ]
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.q,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.a
+      }
+    }))
+  }
+
   const toggle = (idx: number) => {
     setOpenIndex(openIndex === idx ? null : idx)
   }
 
   return (
     <section className="ta-section py-8 sm:py-20 border-b border-[#CBD5E1]" id="faq">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* Reusable Tawakkal Soft Marine Background */}
       <TawakkalBackground variant="soft" />
 

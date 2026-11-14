@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import BrandDetailContent from './brand-detail-content'
-import api from '@/lib/api'
+import { getAllBrands } from '@/lib/server-data'
 
 export const revalidate = 3600
 
@@ -57,12 +57,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export async function generateStaticParams() {
   try {
-    const { data: brands } = await api.get('/brands')
-    if (!Array.isArray(brands)) return []
+    const brands = await getAllBrands()
     return brands.map((b: any) => ({
       brandName: encodeURIComponent(b.name),
     }))
-  } catch {
+  } catch (error) {
+    console.error('generateStaticParams error in brand page:', error)
     return []
   }
 }

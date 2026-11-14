@@ -1,10 +1,26 @@
 import axios, { AxiosRequestConfig, AxiosResponse } from "axios";
 
+const getBaseURL = () => {
+  if (typeof window !== "undefined") {
+    return "/api";
+  }
+  if (process.env.NEXT_PUBLIC_SITE_URL) {
+    return `${process.env.NEXT_PUBLIC_SITE_URL.replace(/\/$/, '')}/api`;
+  }
+  if (process.env.VERCEL_URL) {
+    return `https://${process.env.VERCEL_URL}/api`;
+  }
+  return `http://localhost:${process.env.PORT || 3000}/api`;
+};
+
 const rawApi = axios.create({
-  baseURL: "/api",
+  baseURL: getBaseURL(),
 });
 
 rawApi.interceptors.request.use((config) => {
+  if (typeof window === "undefined" && !config.baseURL?.startsWith("http")) {
+    config.baseURL = getBaseURL();
+  }
   if (typeof window !== "undefined") {
     const token = localStorage.getItem("token");
     if (token) {

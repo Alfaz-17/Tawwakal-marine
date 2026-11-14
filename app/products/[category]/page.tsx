@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import { Suspense } from 'react'
 import CategoryContent from './category-content'
 import { MarineLoader } from '@/components/common/marine-loader'
-import api from '@/lib/api'
+import { getCategoryBySlug, getAllCategories } from '@/lib/server-data'
 
 export const revalidate = 3600
 
@@ -15,10 +15,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const decodedCategory = decodeURIComponent(category)
   
   try {
-    const { data: categories } = await api.get('/categories')
-    const categoryObj = Array.isArray(categories) ? categories.find((c: any) => 
-      c.slug === decodedCategory || c._id === decodedCategory || c.name.toLowerCase().replace(/\s+/g, '-') === decodedCategory
-    ) : null
+    const categoryObj = await getCategoryBySlug(decodedCategory)
 
     const categoryName = categoryObj?.name || decodedCategory.replace(/-/g, ' ').replace(/\b\w/g, (l: string) => l.toUpperCase())
     
@@ -79,12 +76,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export async function generateStaticParams() {
   try {
-    const { data: categories } = await api.get('/categories')
-    if (!Array.isArray(categories)) return []
+    const categories = await getAllCategories()
     return categories.map((c: any) => ({
-      category: c.slug || c._id,
+      category: c.slug || String(c._id),
     }))
-  } catch {
+  } catch (error) {
+    console.error('generateStaticParams error in category page:', error)
     return []
   }
 }
