@@ -20,22 +20,16 @@ export function Hero() {
           className="object-cover object-[72%_center] sm:object-right lg:object-center select-none"
         />
 
-        {/* Desktop Gradient Mask: Soft left-hand blend only on sm+ screens */}
+        {/* Left-Hand Soft Gradient: Guarantees razor-sharp text readability on the left while leaving the ship on the right 100% visible */}
         <div 
-          className="hidden sm:block absolute inset-0 bg-gradient-to-r from-white via-white/95 to-transparent sm:w-[65%] md:w-[55%] lg:w-[48%] xl:w-[45%] z-10" 
-          aria-hidden="true"
-        />
-
-        {/* Mobile Rich Depth: Subtle vignette without ANY whitish washout */}
-        <div 
-          className="sm:hidden absolute inset-0 bg-gradient-to-b from-black/15 via-transparent to-black/20 z-10 pointer-events-none" 
+          className="absolute inset-y-0 left-0 w-[88%] sm:w-[65%] md:w-[55%] lg:w-[48%] xl:w-[45%] bg-gradient-to-r from-white via-white/85 to-transparent z-10 pointer-events-none" 
           aria-hidden="true"
         />
       </div>
 
       {/* Foreground Content Container (Fits Cleanly in First Impression / Mobile Viewport) */}
-      <div className="relative z-20 max-w-7xl mx-auto px-3.5 sm:px-6 lg:px-8 w-full py-3.5 sm:py-8 lg:py-10 flex flex-col justify-center h-full">
-        <div className="w-full md:max-w-xl lg:max-w-2xl xl:max-w-[620px] flex flex-col justify-center my-auto bg-white/85 sm:bg-transparent backdrop-blur-md sm:backdrop-blur-none p-4 sm:p-0 rounded-2xl sm:rounded-none border border-white/70 sm:border-0 shadow-[0_8px_32px_rgba(6,29,69,0.12)] sm:shadow-none">
+      <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-4 sm:py-8 lg:py-10 flex flex-col justify-center h-full">
+        <div className="w-full md:max-w-xl lg:max-w-2xl xl:max-w-[620px] flex flex-col justify-center my-auto">
           
           {/* Top Category Label */}
           <motion.div
@@ -115,7 +109,7 @@ export function Hero() {
             className="pt-2 sm:pt-3 border-t border-[#E2E8F0] grid grid-cols-3 gap-1.5 sm:gap-3 text-center sm:text-left"
           >
             {/* Badge 1 */}
-            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-1 sm:gap-2 bg-white/70 sm:bg-transparent backdrop-blur-2xs sm:backdrop-blur-none p-1 sm:p-0 rounded-md sm:rounded-none border border-slate-200/50 sm:border-0">
+            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-1 sm:gap-2">
               <div className="w-5 h-5 sm:w-7 sm:h-7 rounded-full bg-[#008C95]/10 flex items-center justify-center text-[#008C95] shrink-0">
                 <Clock className="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5" />
               </div>
@@ -130,7 +124,7 @@ export function Hero() {
             </div>
 
             {/* Badge 2 */}
-            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-1 sm:gap-2 bg-white/70 sm:bg-transparent backdrop-blur-2xs sm:backdrop-blur-none p-1 sm:p-0 rounded-md sm:rounded-none border border-slate-200/50 sm:border-0">
+            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-1 sm:gap-2">
               <div className="w-5 h-5 sm:w-7 sm:h-7 rounded-full bg-[#008C95]/10 flex items-center justify-center text-[#008C95] shrink-0">
                 <ShieldCheck className="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5" />
               </div>
@@ -145,7 +139,7 @@ export function Hero() {
             </div>
 
             {/* Badge 3 */}
-            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-1 sm:gap-2 bg-white/70 sm:bg-transparent backdrop-blur-2xs sm:backdrop-blur-none p-1 sm:p-0 rounded-md sm:rounded-none border border-slate-200/50 sm:border-0">
+            <div className="flex flex-col sm:flex-row items-center sm:items-start gap-1 sm:gap-2">
               <div className="w-5 h-5 sm:w-7 sm:h-7 rounded-full bg-[#008C95]/10 flex items-center justify-center text-[#008C95] shrink-0">
                 <Globe className="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5" />
               </div>
