@@ -2,9 +2,10 @@ import { Metadata } from 'next'
 import BrandsContent from './brands-content'
 
 export const metadata: Metadata = {
-  title: 'All 300+ Industrial & Marine Brands | Tawwakal Automation',
-  description: 'Stockist of genuine spare parts for 300+ industrial and marine automation brands: Siemens, ABB, Schneider Electric, Danfoss, Omron, Mitsubishi, Consilium, Furuno, Woodward, and Yokogawa. 100% bench tested.',
+  title: 'All 300+ Industrial & Marine Brands | Tawwakal Marine & Automation',
+  description: 'Stockist of genuine spare parts for 300+ industrial and marine automation brands by Tawwakal Marine: Siemens, ABB, Schneider Electric, Danfoss, Omron, Mitsubishi, Furuno, Woodward, and Yokogawa. 100% bench tested.',
   keywords: [
+    'Tawwakal Marine brands',
     'marine equipment brands',
     'industrial automation manufacturers',
     'Siemens PLC spares',

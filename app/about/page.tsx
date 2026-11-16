@@ -2,16 +2,18 @@ import { Metadata } from 'next'
 import AboutContent from './about-content'
 
 export const metadata: Metadata = {
-  title: 'About Tawwakal Automation | Global Marine & Industrial Automation Stockist',
-  description: 'Learn about Tawwakal Automation: established stockist and exporter of genuine industrial and marine automation spares based in Bhavnagar & Alang. Supporting 300+ brands with 100% bench testing and 24-48h worldwide express dispatch.',
+  title: 'About Tawwakal Marine & Automation | Global Marine & Industrial Automation Stockist',
+  description: 'Learn about Tawwakal Marine (Tawwakal Automation): established stockist and exporter of genuine industrial and marine automation spares based in Bhavnagar & Alang. Supporting 300+ brands with 100% bench testing and 24-48h worldwide express dispatch.',
   keywords: [
-    'About Tawwakal Automation',
+    'About Tawwakal Marine',
+    'Tawwakal Marine Automation',
     'Alang ship breaking spare parts stockist',
     'Bhavnagar industrial automation exporter',
     'marine equipment supplier India',
     'tested PLC supplier',
     'ship automation sourcing',
     'marine electronics company',
+    'Tawwakal Automation',
   ],
   alternates: {
     canonical: 'https://tawwakalautomation.com/about',

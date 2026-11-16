@@ -4,7 +4,7 @@ import { useState, useEffect, useMemo } from "react"
 import { useParams } from "next/navigation"
 import Image from "next/image"
 import Link from "next/link"
-import { Search, ChevronRight, FileText, ArrowRight } from "lucide-react"
+import { Search, ChevronRight, FileText, ArrowRight, ShieldCheck, Clock, Award } from "lucide-react"
 import api from "@/lib/api"
 import { MarineLoader } from "@/components/common/marine-loader"
 import { motion, AnimatePresence } from "framer-motion"
@@ -203,6 +203,50 @@ export default function CategoryContent() {
             </button>
           </div>
         )}
+
+        {/* SEO Technical Sourcing & Engineering Guide */}
+        <div className="mt-12 p-6 sm:p-8 bg-gradient-to-br from-[#F8FAFC] to-[#EDF6FC] border border-[#CBD5E1] rounded-3xl shadow-sm">
+          <div className="max-w-4xl">
+            <div className="inline-flex items-center gap-2 text-[10px] sm:text-[11px] font-extrabold uppercase tracking-[0.2em] text-[#0095A8] mb-2">
+              <ShieldCheck className="w-4 h-4 text-[#0095A8]" />
+              <span>TECHNICAL PROCUREMENT &amp; SOURCING GUIDE</span>
+            </div>
+            <h2 className="text-lg sm:text-2xl font-black text-[#061D45] uppercase tracking-tight mb-3">
+              Genuine &amp; Tested {categoryName} Spares from Alang &amp; Bhavnagar Hub
+            </h2>
+            <div className="text-xs sm:text-sm text-foreground/85 leading-relaxed space-y-3 font-normal">
+              <p>
+                <strong>Tawwakal Marine &amp; Automation</strong> is a leading B2B exporter and direct stockist of genuine <strong>{categoryName}</strong> spare parts. Sourced directly from vessel dismantling at the Alang Ship Breaking Yard and major industrial decommissioning projects across India, our inventory includes hard-to-find obsolete series alongside modern automation lines.
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2">
+                <div className="p-3 bg-white rounded-xl border border-[#CBD5E1]">
+                  <div className="flex items-center gap-1.5 text-[11px] font-black text-[#061D45] uppercase mb-1">
+                    <ShieldCheck className="w-3.5 h-3.5 text-[#0095A8]" />
+                    <span>100% Bench Tested</span>
+                  </div>
+                  <div className="text-[10px] text-muted-foreground leading-normal">Dynamic I/O verification, firmware checks, and optical bench testing before dispatch.</div>
+                </div>
+                <div className="p-3 bg-white rounded-xl border border-[#CBD5E1]">
+                  <div className="flex items-center gap-1.5 text-[11px] font-black text-[#061D45] uppercase mb-1">
+                    <Clock className="w-3.5 h-3.5 text-[#0095A8]" />
+                    <span>24-48h Global Air Dispatch</span>
+                  </div>
+                  <div className="text-[10px] text-muted-foreground leading-normal">Express delivery via DHL/FedEx to shipping berths in Singapore, Dubai, Rotterdam, and Houston.</div>
+                </div>
+                <div className="p-3 bg-white rounded-xl border border-[#CBD5E1]">
+                  <div className="flex items-center gap-1.5 text-[11px] font-black text-[#061D45] uppercase mb-1">
+                    <Award className="w-3.5 h-3.5 text-[#0095A8]" />
+                    <span>Technical Warranty</span>
+                  </div>
+                  <div className="text-[10px] text-muted-foreground leading-normal">Covered by our 6 to 12-month commercial replacement guarantee with video simulation proof.</div>
+                </div>
+              </div>
+              <p className="pt-1 text-[11px] text-muted-foreground">
+                Looking for an exact part code or cross-reference replacement? Send your manufacturer part number to our technical desk for an immediate stock check and quotation.
+              </p>
+            </div>
+          </div>
+        </div>
 
         {/* Other Categories Links */}
         {allCategories.length > 1 && (

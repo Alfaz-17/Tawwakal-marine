@@ -2,10 +2,11 @@ import { Metadata } from 'next'
 import ContactFormSection from './contact-form-section'
 
 export const metadata: Metadata = {
-  title: 'Request a Quote & Contact Us | Tawwakal Automation',
-  description: 'Submit technical RFQ enquiries for industrial & marine automation spare parts: PLCs, drives, HMIs, and circuit breakers. Rapid commercial quotes within 2 hours with worldwide air freight options from Bhavnagar / Alang.',
+  title: 'Request a Quote & Contact Us | Tawwakal Marine & Automation',
+  description: 'Submit technical RFQ enquiries to Tawwakal Marine for industrial & marine automation spare parts: PLCs, drives, HMIs, and marine radar electronics. Rapid commercial quotes within 2 hours with worldwide air freight options from Bhavnagar / Alang.',
   keywords: [
-    'Tawwakal Automation contact',
+    'Tawwakal Marine contact',
+    'Tawwakal Marine RFQ',
     'marine parts quote request',
     'industrial automation RFQ',
     'ship spare parts inquiry',
