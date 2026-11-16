@@ -1,50 +1,33 @@
-export const uploadToCloudinary = async (file: File | Blob, folder = "tawwakal-automation"): Promise<string> => {
+export const uploadToCloudinary = async (file: File | Blob, folder = "tawwakal-automation") => {
   try {
-    // 1. Primary: Use our secure server-side upload endpoint
     const formData = new FormData();
     formData.append("file", file);
+    formData.append("upload_preset", "corona");
     formData.append("folder", folder);
 
-    const apiRes = await fetch("/api/upload", {
-      method: "POST",
-      body: formData,
-    });
-
-    if (apiRes.ok) {
-      const data = await apiRes.json();
-      if (data.url) return data.url;
-    }
-
-    // 2. Client-side direct fallback if /api/upload returned an error
     const cloudName = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME || "aedvwuiw";
-    const directFormData = new FormData();
-    directFormData.append("file", file);
-    directFormData.append("upload_preset", "corona");
-    directFormData.append("folder", folder);
-
-    // Try user's cloud
     let response = await fetch(
       `https://api.cloudinary.com/v1_1/${cloudName}/image/upload`,
       {
         method: "POST",
-        body: directFormData,
+        body: formData,
       }
     );
 
-    // If user's cloud doesn't have the preset yet, fallback to working verified cloud
+    // Fallback to verified working cloud if preset not yet created on aedvwuiw
     if (!response.ok) {
       response = await fetch(
         "https://api.cloudinary.com/v1_1/dljbyn2lk/image/upload",
         {
           method: "POST",
-          body: directFormData,
+          body: formData,
         }
       );
     }
 
     if (!response.ok) {
       const errText = await response.text();
-      throw new Error(`Cloudinary upload error: ${errText}`);
+      throw new Error(`Cloudinary error: ${errText}`);
     }
 
     const data = await response.json();

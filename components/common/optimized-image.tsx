@@ -3,7 +3,7 @@
 import Image from "next/image";
 
 // Cloudinary cloud name
-const CLOUDINARY_CLOUD = "dljbyn2lk";
+const CLOUDINARY_CLOUD = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME || "aedvwuiw";
 
 interface OptimizedImageProps {
   src: string;
