@@ -17,17 +17,17 @@ export function Hero() {
           priority
           quality={95}
           sizes="100vw"
-          className="object-cover object-[72%_center] sm:object-right lg:object-center select-none"
+          className="object-cover object-[75%_center] sm:object-right lg:object-center select-none"
         />
 
-        {/* Left-Hand Soft Gradient: Guarantees razor-sharp text readability on the left while leaving the ship on the right 100% visible */}
+        {/* Directional Soft Blend: Left-to-right fade so text is crisp while ship/ocean is 100% visible */}
         <div 
-          className="absolute inset-y-0 left-0 w-[88%] sm:w-[65%] md:w-[55%] lg:w-[48%] xl:w-[45%] bg-gradient-to-r from-white via-white/85 to-transparent z-10 pointer-events-none" 
+          className="absolute inset-y-0 left-0 w-full sm:w-[65%] md:w-[55%] lg:w-[48%] xl:w-[45%] bg-gradient-to-r from-white/90 via-white/50 to-transparent z-10 pointer-events-none" 
           aria-hidden="true"
         />
       </div>
 
-      {/* Foreground Content Container (Fits Cleanly in First Impression / Mobile Viewport) */}
+      {/* Foreground Content Container - Clean, Seamless Full-Bleed (NO CARD) */}
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-4 sm:py-8 lg:py-10 flex flex-col justify-center h-full">
         <div className="w-full md:max-w-xl lg:max-w-2xl xl:max-w-[620px] flex flex-col justify-center my-auto">
           
@@ -71,7 +71,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.45, delay: 0.2 }}
-            className="text-[11px] sm:text-[13px] text-[#202A3A]/85 max-w-lg leading-relaxed mb-3.5 sm:mb-5 font-normal line-clamp-2 sm:line-clamp-none"
+            className="text-[11px] sm:text-[13px] text-[#202A3A] max-w-lg leading-relaxed mb-3.5 sm:mb-5 font-medium line-clamp-2 sm:line-clamp-none"
           >
             Tawwakal Marine supplies bench-tested automation modules, PLCs, VFD inverters, navigation systems, and genuine ship spares sourced directly from the Bhavnagar &amp; Alang hub.
           </motion.p>
@@ -101,16 +101,16 @@ export function Hero() {
             </Link>
           </motion.div>
 
-          {/* 3 Bottom Feature Badges */}
+          {/* 3 Bottom Feature Badges - Natural Inline (NO CARD BOXES) */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.35 }}
-            className="pt-2 sm:pt-3 border-t border-[#E2E8F0] grid grid-cols-3 gap-1.5 sm:gap-3 text-center sm:text-left"
+            className="pt-2 sm:pt-3 border-t border-[#CBD5E1]/80 grid grid-cols-3 gap-2 sm:gap-3 text-center sm:text-left"
           >
             {/* Badge 1 */}
             <div className="flex flex-col sm:flex-row items-center sm:items-start gap-1 sm:gap-2">
-              <div className="w-5 h-5 sm:w-7 sm:h-7 rounded-full bg-[#008C95]/10 flex items-center justify-center text-[#008C95] shrink-0">
+              <div className="w-5 h-5 sm:w-7 sm:h-7 rounded-full bg-[#008C95]/15 flex items-center justify-center text-[#008C95] shrink-0">
                 <Clock className="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5" />
               </div>
               <div>
@@ -125,7 +125,7 @@ export function Hero() {
 
             {/* Badge 2 */}
             <div className="flex flex-col sm:flex-row items-center sm:items-start gap-1 sm:gap-2">
-              <div className="w-5 h-5 sm:w-7 sm:h-7 rounded-full bg-[#008C95]/10 flex items-center justify-center text-[#008C95] shrink-0">
+              <div className="w-5 h-5 sm:w-7 sm:h-7 rounded-full bg-[#008C95]/15 flex items-center justify-center text-[#008C95] shrink-0">
                 <ShieldCheck className="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5" />
               </div>
               <div>
@@ -140,7 +140,7 @@ export function Hero() {
 
             {/* Badge 3 */}
             <div className="flex flex-col sm:flex-row items-center sm:items-start gap-1 sm:gap-2">
-              <div className="w-5 h-5 sm:w-7 sm:h-7 rounded-full bg-[#008C95]/10 flex items-center justify-center text-[#008C95] shrink-0">
+              <div className="w-5 h-5 sm:w-7 sm:h-7 rounded-full bg-[#008C95]/15 flex items-center justify-center text-[#008C95] shrink-0">
                 <Globe className="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5" />
               </div>
               <div>
