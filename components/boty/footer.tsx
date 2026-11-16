@@ -71,87 +71,55 @@ export function Footer() {
   ]
 
   return (
-    <footer className="bg-[#04142B] text-white pt-8 sm:pt-14 pb-8 sm:pb-10 rounded-t-3xl relative overflow-hidden mt-6 sm:mt-8 border-t border-[#0095A8]/25">
+    <footer className="bg-[#04142B] text-white pt-8 sm:pt-12 pb-6 sm:pb-8 rounded-t-3xl relative overflow-hidden mt-6 sm:mt-8 border-t border-[#0095A8]/25">
       {/* Reusable Tawakkal Dark Marine Background */}
       <TawakkalBackground variant="dark" />
 
-      <div className="ta-content max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 relative z-10">
+      <div className="ta-content max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
-        {/* Top Feature Highlights - 2 cols on mobile */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-2.5 sm:gap-4 pb-6 sm:pb-8 mb-6 sm:mb-8 border-b border-[#0095A8]/20">
-          <div className="flex items-start gap-2.5 sm:gap-3.5 p-3 sm:p-5 rounded-2xl bg-[#0B1E3F] border border-[#0095A8]/20 shadow-xs">
-            <div className="w-7 h-7 sm:w-9 sm:h-9 rounded-xl bg-[#0095A8]/20 flex items-center justify-center shrink-0 text-[#0095A8]">
-              <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-            </div>
-            <div>
-              <h4 className="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-white">B2B Sourcing</h4>
-              <p className="text-[10px] sm:text-[11px] text-slate-300 mt-0.5 sm:mt-1 leading-relaxed line-clamp-2 sm:line-clamp-none">
-                Dedicated equipment supply and parts identification for marine fleets and plants.
-              </p>
-            </div>
-          </div>
-
-          <div className="flex items-start gap-2.5 sm:gap-3.5 p-3 sm:p-5 rounded-2xl bg-[#0B1E3F] border border-[#0095A8]/20 shadow-xs">
-            <div className="w-7 h-7 sm:w-9 sm:h-9 rounded-xl bg-[#0095A8]/20 flex items-center justify-center shrink-0 text-[#0095A8]">
-              <CheckCircle2 className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-            </div>
-            <div>
-              <h4 className="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-white">Spec Review</h4>
-              <p className="text-[10px] sm:text-[11px] text-slate-300 mt-0.5 sm:mt-1 leading-relaxed line-clamp-2 sm:line-clamp-none">
-                We review technical drawings, part numbers, and serials for exact fit.
-              </p>
-            </div>
-          </div>
-
-          <div className="col-span-2 md:col-span-1 flex items-start gap-2.5 sm:gap-3.5 p-3 sm:p-5 rounded-2xl bg-[#0B1E3F] border border-[#0095A8]/20 shadow-xs">
-            <div className="w-7 h-7 sm:w-9 sm:h-9 rounded-xl bg-[#0095A8]/20 flex items-center justify-center shrink-0 text-[#0095A8]">
-              <Mail className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-            </div>
-            <div>
-              <h4 className="text-[11px] sm:text-xs font-bold uppercase tracking-wider text-white">Fast Quotations</h4>
-              <p className="text-[10px] sm:text-[11px] text-slate-300 mt-0.5 sm:mt-1 leading-relaxed line-clamp-2 sm:line-clamp-none">
-                Submit your BOM or urgent part requirement for structured commercial terms.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Main Footer Columns - 2 cols on mobile */}
-        <div className="grid grid-cols-2 lg:grid-cols-5 gap-6 sm:gap-8 mb-8 sm:mb-10">
+        {/* Main Clean 4-Column Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-6 sm:mb-8">
           
-          {/* Brand & Overview */}
-          <div className="col-span-2 space-y-3 sm:space-y-4">
+          {/* Column 1: Brand & Bio */}
+          <div className="space-y-3">
             <Logo size="md" variant="white" />
-            <p className="text-[11px] sm:text-xs text-white/70 leading-relaxed max-w-sm">
-              Tawwakal Automation supports marine, shipping, engineering, manufacturing, and industrial facilities with verified equipment, ship spare parts, automation components, and supply assistance.
+            <p className="text-xs text-white/70 leading-relaxed">
+              Global supplier and stockist of marine equipment, ship spares, and industrial automation parts from Bhavnagar and Alang, India.
             </p>
-            <div className="space-y-1.5 sm:space-y-2 text-[11px] sm:text-xs text-white/80">
+          </div>
+
+          {/* Column 2: Contact Info */}
+          <div>
+            <h3 className="text-xs font-bold uppercase tracking-widest text-[#0095A8] mb-3">
+              Direct Contact
+            </h3>
+            <div className="space-y-2 text-xs text-white/80">
               <div className="flex items-center gap-2">
                 <Phone className="w-3.5 h-3.5 text-[#0095A8] shrink-0" />
-                <a href="tel:+916356547827" className="hover:text-[#0095A8] transition-colors font-medium">
+                <a href="tel:+916356547827" className="hover:text-[#0095A8] transition-colors font-semibold">
                   +91 6356547827
                 </a>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-3.5 h-3.5 text-[#0095A8] shrink-0" />
-                <a href="mailto:sales@tawwakalautomation.com" className="hover:text-[#0095A8] transition-colors font-medium">
+                <a href="mailto:sales@tawwakalautomation.com" className="hover:text-[#0095A8] transition-colors font-semibold">
                   sales@tawwakalautomation.com
                 </a>
               </div>
-              <div className="flex items-center gap-2">
-                <MapPin className="w-3.5 h-3.5 text-[#0095A8] shrink-0" />
-                <span>Bhavnagar / Alang &amp; Global Supply Hub</span>
+              <div className="flex items-start gap-2">
+                <MapPin className="w-3.5 h-3.5 text-[#0095A8] shrink-0 mt-0.5" />
+                <span>Bhavnagar / Alang, Gujarat, India</span>
               </div>
             </div>
           </div>
 
-          {/* Products Column */}
-          <div className="col-span-1">
-            <h3 className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#0095A8] mb-2 sm:mb-4">
-              Products
+          {/* Column 3: Spares & Categories */}
+          <div>
+            <h3 className="text-xs font-bold uppercase tracking-widest text-[#0095A8] mb-3">
+              Popular Spares
             </h3>
-            <ul className="space-y-1.5 sm:space-y-2 text-[11px] sm:text-xs">
-              {productLinks.map((link) => (
+            <ul className="space-y-1.5 text-xs">
+              {productLinks.slice(0, 6).map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
@@ -164,56 +132,50 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Company Column */}
-          <div className="col-span-1">
-            <h3 className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#0095A8] mb-2 sm:mb-4">
-              Company
+          {/* Column 4: Quick Links */}
+          <div>
+            <h3 className="text-xs font-bold uppercase tracking-widest text-[#0095A8] mb-3">
+              Quick Links
             </h3>
-            <ul className="space-y-1.5 sm:space-y-2 text-[11px] sm:text-xs">
-              {companyLinks.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-white/70 hover:text-white transition-colors block truncate"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
+            <ul className="space-y-1.5 text-xs">
+              <li>
+                <Link href="/about" className="text-white/70 hover:text-white transition-colors">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/brands" className="text-white/70 hover:text-white transition-colors">
+                  Brands We Stock
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="text-white/70 hover:text-white transition-colors">
+                  Request a Quote
+                </Link>
+              </li>
+              <li>
+                <Link href="/privacy" className="text-white/70 hover:text-white transition-colors">
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link href="/terms" className="text-white/70 hover:text-white transition-colors">
+                  Terms of Supply
+                </Link>
+              </li>
             </ul>
           </div>
 
-          {/* Procurement Column */}
-          <div className="col-span-2 lg:col-span-1 mt-2 sm:mt-0 pt-3 sm:pt-0 border-t border-white/10 lg:border-t-0">
-            <h3 className="text-[10px] sm:text-xs font-bold uppercase tracking-widest text-[#0095A8] mb-2 sm:mb-4">
-              Procurement
-            </h3>
-            <ul className="grid grid-cols-2 lg:grid-cols-1 gap-1.5 sm:gap-2 text-[11px] sm:text-xs">
-              {procurementLinks.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-white/70 hover:text-white transition-colors block truncate"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="pt-4 sm:pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-2.5 sm:gap-3 text-[10px] sm:text-[11px] text-white/50 text-center sm:text-left">
+        {/* Clean Bottom Bar */}
+        <div className="pt-4 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-white/50 text-center sm:text-left">
           <div>
             &copy; {new Date().getFullYear()} Tawwakal Marine &amp; Automation. All rights reserved.
           </div>
-          <div className="flex items-center gap-4 sm:gap-5">
-            <Link href="/privacy" className="hover:text-white transition-colors">
-              Privacy Policy
-            </Link>
-            <Link href="/terms" className="hover:text-white transition-colors">
-              Terms of Supply
+          <div className="flex items-center gap-4">
+            <Link href="/contact" className="hover:text-white transition-colors">
+              Support
             </Link>
             <Link href="/admin/login" className="hover:text-white/80 transition-colors">
               Staff Portal

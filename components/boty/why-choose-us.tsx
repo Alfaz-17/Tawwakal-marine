@@ -7,38 +7,38 @@ import TawakkalBackground from "@/components/TawakkalBackground"
 export function WhyChooseUs() {
   const reasons = [
     {
-      title: "Direct Alang & Bhavnagar Stock",
-      desc: "Located directly at the Bhavnagar and Alang maritime hub, giving you fast access to genuine surplus equipment and ship spares.",
+      title: "Direct Bhavnagar & Alang Warehouse",
+      desc: "Large ready stock of genuine surplus equipment, marine spares, and industrial automation components.",
       icon: Compass,
-      stat: "Direct Hub"
+      stat: "Ready Stock"
     },
     {
-      title: "100% Tested Before Dispatch",
-      desc: "Every PLC, HMI, drive, and electronic module is tested by our technicians before packing. You receive working parts with test verification.",
+      title: "Tested Before Dispatch",
+      desc: "Every part is inspected and tested by technicians before packing. You receive working parts with real photos.",
       icon: ShieldCheck,
-      stat: "Tested & Verified"
+      stat: "Tested Parts"
     },
     {
       title: "Fast Worldwide Shipping",
-      desc: "Dispatched within 24 to 48 hours via DHL, FedEx, or air cargo with direct door-to-door tracking to any port or plant worldwide.",
+      desc: "Dispatched within 24 to 48 hours via DHL, FedEx, or air cargo with live tracking directly to your vessel or plant.",
       icon: Clock,
       stat: "24-48h Dispatch"
     },
     {
       title: "1-Year Replacement Warranty",
-      desc: "All tested items include a full 1-year replacement warranty so you can install and operate with complete confidence.",
+      desc: "All tested items include a full 1-year replacement warranty so you can install and operate with peace of mind.",
       icon: Award,
       stat: "1-Year Warranty"
     },
     {
       title: "Hard-to-Find & Obsolete Parts",
-      desc: "Looking for a discontinued or legacy model? We maintain a deep stock of rare spares that are out of stock with standard distributors.",
+      desc: "Need a discontinued or legacy model? We maintain a deep stock of rare parts that are out of stock with distributors.",
       icon: FileSearch,
-      stat: "Legacy Spares"
+      stat: "Rare Spares"
     },
     {
       title: "Fast Quotes & Actual Photos",
-      desc: "Quick turnaround on inquiries with actual part photos, confirmed serial numbers, and clear, transparent pricing.",
+      desc: "Quick turnaround on inquiries with actual part photos, confirmed serial numbers, and clear pricing.",
       icon: CheckCircle2,
       stat: "Fast Response"
     }

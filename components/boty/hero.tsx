@@ -40,9 +40,7 @@ export function Hero() {
           >
             <span>TAWWAKAL MARINE</span>
             <span className="text-[#008C95]/50">•</span>
-            <span>INDUSTRIAL AUTOMATION</span>
-            <span className="text-[#008C95]/50">•</span>
-            <span>ALANG EXPORT HUB</span>
+            <span>MARINE &amp; INDUSTRIAL SPARES</span>
           </motion.div>
 
           {/* Main Headline */}
@@ -73,7 +71,7 @@ export function Hero() {
             transition={{ duration: 0.45, delay: 0.2 }}
             className="text-[11px] sm:text-[13px] text-[#202A3A] max-w-lg leading-relaxed mb-3.5 sm:mb-5 font-medium line-clamp-2 sm:line-clamp-none"
           >
-            Tawwakal Marine supplies tested marine equipment, ship spare parts, and industrial automation spares directly from our Bhavnagar &amp; Alang warehouse. Fast worldwide delivery with a 1-year replacement warranty.
+            Tawwakal Marine supplies reliable marine equipment, ship spare parts, and industrial automation parts with fast worldwide delivery and a 1-year replacement warranty.
           </motion.p>
 
           {/* Action Buttons - Compact 2-button row on mobile */}
@@ -130,10 +128,10 @@ export function Hero() {
               </div>
               <div>
                 <div className="text-[8.5px] sm:text-[10px] font-extrabold uppercase tracking-wider text-[#0B153B]">
-                  GUARANTEED
+                  QUALITY
                 </div>
                 <div className="text-[7.5px] sm:text-[9px] font-semibold text-muted-foreground uppercase leading-tight">
-                  100% TESTED
+                  TESTED SPARES
                 </div>
               </div>
             </div>

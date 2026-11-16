@@ -47,7 +47,7 @@ export function ProductGrid() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-10">
           <div className="inline-flex items-center gap-2 text-[10px] sm:text-[11px] font-extrabold uppercase tracking-[0.2em] text-[#0095A8] mb-1.5 sm:mb-2">
-            <span>IN-STOCK INVENTORY</span>
+            <span>FEATURED HARDWARE</span>
           </div>
           
           <h2 className="font-sans font-black text-xl sm:text-3xl lg:text-4xl text-[#061D45] uppercase tracking-tight">

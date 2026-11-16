@@ -70,14 +70,6 @@ export function ProductCard({ product }: ProductCardProps) {
           }}
           className="object-contain p-3.5 sm:p-5 group-hover:scale-105 transition-transform duration-300"
         />
-        
-        {/* Simple In-Stock indicator */}
-        <div className="absolute top-2.5 left-2.5">
-          <span className="inline-flex items-center gap-1.5 bg-white/95 backdrop-blur-xs text-emerald-700 border border-emerald-200/80 px-2 py-0.5 text-[10px] font-semibold rounded-full shadow-2xs">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-            In Stock
-          </span>
-        </div>
       </div>
       
       {/* Product Information */}

@@ -11,7 +11,7 @@ export function AboutSection() {
   const verifiedStats = [
     { label: "Spares Categories", value: "50+" },
     { label: "OEM Brands", value: "15+" },
-    { label: "Tested Quality", value: "100%" },
+    { label: "Warranty Backed", value: "1 Year" },
     { label: "Express Dispatch", value: "24-48h" },
   ]
 
