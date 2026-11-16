@@ -214,6 +214,24 @@ await test('API Feed: Google Merchant Center RSS feed generator logic', async ()
   assert.ok(xml.includes('<item>'), 'XML must contain items');
 });
 
+// 8. Cloudinary Image Upload Integration
+await test('API Upload: Cloudinary image upload pipeline returns valid CDN URL', async () => {
+  const samplePixel = Buffer.from('iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg==', 'base64');
+  const blob = new Blob([samplePixel], { type: 'image/png' });
+  const f = new FormData();
+  f.append('file', blob, 'test.png');
+  f.append('upload_preset', 'corona');
+  f.append('folder', 'tawwakal-automation');
+
+  const res = await fetch('https://api.cloudinary.com/v1_1/dljbyn2lk/image/upload', {
+    method: 'POST',
+    body: f
+  });
+  assert.equal(res.status, 200, 'Cloudinary upload must succeed with status 200');
+  const data = await res.json();
+  assert.ok(data.secure_url.startsWith('https://res.cloudinary.com/'), 'Must return valid Cloudinary secure_url');
+});
+
 await mongoose.disconnect();
 console.log(`\nBackend API Integration Summary: ${passed} passed, ${failed} failed`);
 if (failed > 0) process.exit(1);
