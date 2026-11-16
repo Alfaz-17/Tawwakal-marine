@@ -7,40 +7,40 @@ import TawakkalBackground from "@/components/TawakkalBackground"
 export function WhyChooseUs() {
   const reasons = [
     {
-      title: "Strategic Maritime Corridor",
-      desc: "Direct physical presence at the world-renowned Bhavnagar and Alang hub, unlocking genuine marine machinery and heavy industrial surplus.",
+      title: "Direct Alang & Bhavnagar Stock",
+      desc: "Located directly at the Bhavnagar and Alang maritime hub, giving you fast access to genuine surplus equipment and ship spares.",
       icon: Compass,
-      stat: "Direct Stock"
+      stat: "Direct Hub"
     },
     {
-      title: "100% Bench Tested & QC Verified",
-      desc: "Every electronic board, drive, and PLC module undergoes static and live electrical testing on dedicated simulation racks prior to dispatch.",
+      title: "100% Tested Before Dispatch",
+      desc: "Every PLC, HMI, drive, and electronic module is tested by our technicians before packing. You receive working parts with test verification.",
       icon: ShieldCheck,
-      stat: "Zero Failure QC"
+      stat: "Tested & Verified"
     },
     {
-      title: "24–48h Rapid Seaport Dispatch",
-      desc: "Urgent marine requisition fulfillment with international air courier tracking to ports in Singapore, Rotterdam, Dubai, and Houston.",
+      title: "Fast Worldwide Shipping",
+      desc: "Dispatched within 24 to 48 hours via DHL, FedEx, or air cargo with direct door-to-door tracking to any port or plant worldwide.",
       icon: Clock,
-      stat: "Priority Airfreight"
+      stat: "24-48h Dispatch"
     },
     {
-      title: "12-Month Replacement Warranty",
-      desc: "Standard 1-year warranty on all pre-owned tested modules, providing superintendents and engineers complete commercial peace of mind.",
+      title: "1-Year Replacement Warranty",
+      desc: "All tested items include a full 1-year replacement warranty so you can install and operate with complete confidence.",
       icon: Award,
-      stat: "12M Assurance"
+      stat: "1-Year Warranty"
     },
     {
-      title: "Legacy & Obsolete Matching",
-      desc: "Specialized engineering desk capable of cross-referencing discontinued part numbers, firmware versions, and pinout-compatible replacements.",
+      title: "Hard-to-Find & Obsolete Parts",
+      desc: "Looking for a discontinued or legacy model? We maintain a deep stock of rare spares that are out of stock with standard distributors.",
       icon: FileSearch,
-      stat: "BOM Solving"
+      stat: "Legacy Spares"
     },
     {
-      title: "B2B Commercial Reliability",
-      desc: "Fully structured quotation dossiers with photographic documentation, verified serial plates, and formal commercial invoicing.",
+      title: "Fast Quotes & Actual Photos",
+      desc: "Quick turnaround on inquiries with actual part photos, confirmed serial numbers, and clear, transparent pricing.",
       icon: CheckCircle2,
-      stat: "Full Audit Trail"
+      stat: "Fast Response"
     }
   ]
 
@@ -54,14 +54,14 @@ export function WhyChooseUs() {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-12">
           <div className="inline-flex items-center gap-2 text-[10px] sm:text-[11px] font-extrabold uppercase tracking-[0.2em] text-[#0095A8] mb-1.5 sm:mb-2">
-            <span>ENGINEERING INTEGRITY</span>
+            <span>BUY WITH CONFIDENCE</span>
           </div>
 
           <h2 className="font-sans font-black text-xl sm:text-3xl lg:text-4xl text-white uppercase tracking-tight">
-            WHY INDUSTRY LEADERS TRUST TAWWAKAL
+            WHY CHOOSE TAWWAKAL MARINE
           </h2>
           <p className="mt-1 sm:mt-2 text-xs sm:text-sm text-slate-300 max-w-xl mx-auto leading-relaxed">
-            Delivering uncompromised quality, verified specifications, and technical accountability to marine and industrial operators worldwide.
+            Reliable marine and industrial automation spares with verified testing, fast delivery, and guaranteed warranty.
           </p>
         </div>
 
@@ -94,8 +94,8 @@ export function WhyChooseUs() {
                 </div>
 
                 <div className="pt-2 sm:pt-4 mt-2 sm:mt-4 border-t border-[#0095A8]/20 flex items-center gap-1.5 text-[8.5px] sm:text-[10.5px] font-bold text-[#0095A8] uppercase tracking-wider">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#0095A8] animate-pulse shrink-0" />
-                  <span className="truncate">Verified Capability</span>
+                  <CheckCircle2 className="w-3 h-3 text-[#0095A8] shrink-0" />
+                  <span className="truncate">Guaranteed Service</span>
                 </div>
               </div>
             )

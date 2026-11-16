@@ -68,14 +68,14 @@ export function FAQSection() {
         <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-12">
           <div className="inline-flex items-center gap-2 text-[10px] sm:text-[11px] font-extrabold uppercase tracking-[0.2em] text-[#0095A8] mb-1.5 sm:mb-2">
             <HelpCircle className="w-3.5 h-3.5 text-[#0095A8]" />
-            <span>TRANSPARENT PROCUREMENT GUIDELINES</span>
+            <span>COMMON QUESTIONS &amp; ANSWERS</span>
           </div>
           
           <h2 className="font-sans font-black text-xl sm:text-3xl lg:text-4xl text-[#061D45] uppercase tracking-tight">
             FREQUENTLY ASKED QUESTIONS
           </h2>
           <p className="mt-1 sm:mt-2 text-xs sm:text-sm text-muted-foreground leading-relaxed">
-            Essential information regarding testing protocols, delivery timelines, part number verification, and warranty terms.
+            Clear answers about part testing, international delivery, warranty, and how to order.
           </p>
         </div>
 
@@ -123,9 +123,9 @@ export function FAQSection() {
 
         {/* Support Link */}
         <div className="mt-5 sm:mt-8 text-center text-[11px] sm:text-xs text-muted-foreground">
-          <span>Still have questions about a specific component? </span>
+          <span>Still have questions about a specific part? </span>
           <Link href="/contact" className="font-bold text-[#0095A8] hover:underline uppercase tracking-wider inline-flex items-center gap-1">
-            <span>Contact Technical Desk</span>
+            <span>Talk to Our Team</span>
             <ArrowRight className="w-3 h-3" />
           </Link>
         </div>

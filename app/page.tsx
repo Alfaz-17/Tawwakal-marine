@@ -1,10 +1,9 @@
 import { Hero } from "@/components/boty/hero"
-import { AboutSection } from "@/components/boty/about-section"
 import { CategorySection } from "@/components/boty/category-section"
 import { ProductGrid } from "@/components/boty/product-grid"
-import { BrandGrid } from "@/components/boty/brands-grid"
 import { WhyChooseUs } from "@/components/boty/why-choose-us"
-import { ProjectsCaseStudies } from "@/components/boty/projects-case-studies"
+import { BrandGrid } from "@/components/boty/brands-grid"
+import { AboutSection } from "@/components/boty/about-section"
 import { GlobalCustomers } from "@/components/boty/global-customers"
 import { FAQSection } from "@/components/boty/faq-section"
 import { HomeContactSection } from "@/components/boty/home-contact-section"
@@ -60,31 +59,28 @@ export default function HomePage() {
       {/* 1. Hero Section */}
       <Hero />
 
-      {/* 2. About Tawwakal */}
-      <AboutSection />
-
-      {/* 3. Shop by Categories */}
+      {/* 2. Shop by Categories */}
       <CategorySection />
 
-      {/* 4. Featured Products & Equipment */}
+      {/* 3. Featured Products & Equipment */}
       <ProductGrid />
+
+      {/* 4. Why Choose Us (Simple & Clear Benefits) */}
+      <WhyChooseUs />
 
       {/* 5. Brands & Technology Platforms */}
       <BrandGrid />
 
-      {/* 6. Why Choose Us */}
-      <WhyChooseUs />
+      {/* 6. About Tawwakal Marine */}
+      <AboutSection />
 
-      {/* 7. Projects & Case Studies */}
-      <ProjectsCaseStudies />
-
-      {/* 8. Client Testimonials & Global Reach */}
+      {/* 7. Client Testimonials & Global Reach */}
       <GlobalCustomers />
 
-      {/* 10. Frequently Asked Questions */}
+      {/* 8. Frequently Asked Questions */}
       <FAQSection />
 
-      {/* 11. Request a Quote / Contact */}
+      {/* 9. Request a Quote / Contact */}
       <HomeContactSection />
     </main>
   )

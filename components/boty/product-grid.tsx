@@ -47,14 +47,14 @@ export function ProductGrid() {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-10">
           <div className="inline-flex items-center gap-2 text-[10px] sm:text-[11px] font-extrabold uppercase tracking-[0.2em] text-[#0095A8] mb-1.5 sm:mb-2">
-            <span>VERIFIED HARDWARE STOCK</span>
+            <span>IN-STOCK INVENTORY</span>
           </div>
           
           <h2 className="font-sans font-black text-xl sm:text-3xl lg:text-4xl text-[#061D45] uppercase tracking-tight">
-            FEATURED PRODUCTS &amp; EQUIPMENT
+            FEATURED SPARES &amp; EQUIPMENT
           </h2>
           <p className="mt-1 sm:mt-2 text-xs sm:text-sm text-muted-foreground max-w-xl mx-auto leading-relaxed">
-            Inspect verified industrial automation modules, drives, and marine spares bench-tested and ready for express dispatch.
+            Browse tested automation modules, motor drives, and marine equipment ready for immediate worldwide dispatch.
           </p>
 
           {/* Interactive Sector Switcher Tabs */}

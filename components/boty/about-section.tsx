@@ -9,9 +9,9 @@ import TawakkalBackground from "@/components/TawakkalBackground"
 
 export function AboutSection() {
   const verifiedStats = [
-    { label: "Subcategories Handled", value: "52+" },
-    { label: "OEM Brands Supported", value: "15+" },
-    { label: "Bench Tested QC", value: "100%" },
+    { label: "Spares Categories", value: "50+" },
+    { label: "OEM Brands", value: "15+" },
+    { label: "Tested Quality", value: "100%" },
     { label: "Express Dispatch", value: "24-48h" },
   ]
 
@@ -78,15 +78,15 @@ export function AboutSection() {
             </div>
 
             <h2 className="font-sans font-black text-xl sm:text-3xl lg:text-4xl text-[#061D45] uppercase tracking-tight leading-tight">
-              PRECISION SOURCING &amp; AUTOMATION FOR MARINE &amp; INDUSTRY
+              YOUR TRUSTED SOURCE FOR SHIP SPARES &amp; AUTOMATION
             </h2>
 
             <p className="text-[11px] sm:text-sm text-foreground/80 leading-relaxed">
-              Based at the world-renowned maritime trade corridor of Bhavnagar and Alang, <strong>Tawwakal Marine (Tawwakal Automation)</strong> specializes in technical identification, bench-testing, and global supply of marine control equipment, ship navigation electronics, and industrial automation spares.
+              Based in Bhavnagar and Alang (India), <strong>Tawwakal Marine</strong> is a global supplier and stockist of marine equipment, ship navigation electronics, and industrial automation spares.
             </p>
 
             <p className="text-[11px] sm:text-sm text-muted-foreground leading-relaxed">
-              We eliminate costly downtime for commercial vessel operators and automated manufacturing plants through dependable supply chains, verified OEM specifications, and rapid international airfreight logistics.
+              We help vessel operators and factories avoid costly downtime. Every part is inspected, tested by technicians, and dispatched with fast worldwide delivery and a 1-year replacement warranty.
             </p>
 
             {/* 4 Stats Grid - 2 cols on mobile */}
@@ -105,14 +105,14 @@ export function AboutSection() {
                 href="/about"
                 className="flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 sm:gap-2 rounded-full bg-[#061D45] hover:bg-[#0095A8] text-white px-3 sm:px-5 py-2 sm:py-2.5 text-[11px] sm:text-xs font-bold uppercase tracking-wider transition-colors shadow-2xs text-center"
               >
-                <span>Company Profile</span>
+                <span>About Us</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </Link>
               <Link
                 href="/contact"
                 className="flex-1 sm:flex-none inline-flex items-center justify-center gap-1.5 sm:gap-2 rounded-full bg-white hover:bg-[#EDF6FC] text-[#061D45] border border-[#CBD5E1] px-3 sm:px-5 py-2 sm:py-2.5 text-[11px] sm:text-xs font-bold uppercase tracking-wider transition-colors shadow-2xs text-center"
               >
-                <span>Consultation</span>
+                <span>Contact Team</span>
               </Link>
             </div>
           </div>
