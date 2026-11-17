@@ -234,7 +234,7 @@ export function Header() {
           <div className="hidden md:flex items-center gap-4 text-white/70">
             <span className="flex items-center gap-1.5">
               <span className="w-1.5 h-1.5 rounded-full bg-[#0095A8] animate-pulse" />
-              <span>Direct Alang &amp; Bhavnagar Stockist · 24-48h Worldwide Dispatch</span>
+              <span>Global Marine &amp; Industrial Spares · Express Worldwide Dispatch</span>
             </span>
             <span className="text-white/30">|</span>
             <Link 

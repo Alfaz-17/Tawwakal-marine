@@ -31,7 +31,7 @@ export function GlobalCustomers() {
       name: "Rajesh Kulkarni",
       role: "Plant Maintenance Manager",
       company: "Gujarat Industrial Chemicals, Dahej",
-      comment: "Excellent supplier for industrial automation parts. Their Bhavnagar testing lab is top tier. We regularly source Allen-Bradley ControlLogix and Pro-face HMIs with full replacement warranty.",
+      comment: "Excellent supplier for industrial automation parts. Their testing lab is top tier. We regularly source Allen-Bradley ControlLogix and Pro-face HMIs with reliable quality.",
       rating: 5
     }
   ]
@@ -44,7 +44,7 @@ export function GlobalCustomers() {
       <div className="ta-content max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 relative z-10">
         
         {/* Header */}
-        <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-10">
+        <div className="text-center max-w-3xl mx-auto mb-4 sm:mb-8">
           <div className="inline-flex items-center gap-2 text-[10px] sm:text-[11px] font-extrabold uppercase tracking-[0.2em] text-[#0095A8] mb-1.5 sm:mb-2">
             <span>PROVEN WORLDWIDE TRACK RECORD</span>
           </div>
@@ -52,9 +52,6 @@ export function GlobalCustomers() {
           <h2 className="font-sans font-black text-xl sm:text-3xl lg:text-4xl tracking-tight text-[#061D45] uppercase">
             40K+ HAPPY CUSTOMERS GLOBALLY
           </h2>
-          <p className="mt-1 sm:mt-2 text-xs sm:text-sm text-slate-600 max-w-xl mx-auto leading-relaxed">
-            Here you can find the experience of marine superintendents, vessel engineers, and plant managers who rely on our Alang stockist inventory.
-          </p>
         </div>
 
         {/* 4 Stats Counters - 2 cols on mobile */}

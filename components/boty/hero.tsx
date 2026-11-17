@@ -71,7 +71,7 @@ export function Hero() {
             transition={{ duration: 0.45, delay: 0.2 }}
             className="text-[11px] sm:text-[13px] text-[#202A3A] max-w-lg leading-relaxed mb-3.5 sm:mb-5 font-medium line-clamp-2 sm:line-clamp-none"
           >
-            Tawwakal Marine supplies reliable marine equipment, ship spare parts, and industrial automation parts with fast worldwide delivery and a 1-year replacement warranty.
+            Tawwakal Marine supplies reliable marine equipment, ship spare parts, and industrial automation parts with fast worldwide delivery.
           </motion.p>
 
           {/* Action Buttons - Compact 2-button row on mobile */}

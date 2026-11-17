@@ -84,7 +84,7 @@ export function Footer() {
           <div className="space-y-3">
             <Logo size="md" variant="white" />
             <p className="text-xs text-white/70 leading-relaxed">
-              Global supplier and stockist of marine equipment, ship spares, and industrial automation parts from Bhavnagar and Alang, India.
+              Global supplier and stockist of marine equipment, ship spare parts, and industrial automation components. Worldwide express delivery.
             </p>
           </div>
 
@@ -108,7 +108,7 @@ export function Footer() {
               </div>
               <div className="flex items-start gap-2">
                 <MapPin className="w-3.5 h-3.5 text-[#0095A8] shrink-0 mt-0.5" />
-                <span>Bhavnagar / Alang, Gujarat, India</span>
+                <span>Gujarat, India · Worldwide Delivery</span>
               </div>
             </div>
           </div>

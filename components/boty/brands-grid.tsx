@@ -65,9 +65,6 @@ export function BrandGrid() {
         <h3 className="font-sans font-black text-xl sm:text-3xl lg:text-4xl text-[#061D45] uppercase tracking-tight">
           BRANDS &amp; TECHNOLOGY PLATFORMS
         </h3>
-        <p className="text-xs sm:text-sm text-slate-600 mt-1 sm:mt-2 max-w-xl mx-auto leading-relaxed">
-          Supporting equipment, modules, and spare parts identification across global marine machinery and automation manufacturers.
-        </p>
       </div>
 
       {/* Infinite Continuous Marquee */}

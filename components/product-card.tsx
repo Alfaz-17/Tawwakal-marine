@@ -100,8 +100,7 @@ export function ProductCard({ product }: ProductCardProps) {
         </div>
 
         {/* Action Bar */}
-        <div className="pt-2.5 border-t border-slate-100 flex items-center justify-between">
-          <span className="text-[11px] text-slate-400 font-medium">1 Year Warranty</span>
+        <div className="pt-2 border-t border-slate-100 flex items-center justify-end">
           <span className="text-xs font-semibold text-[#0095A8] group-hover:text-[#061D45] flex items-center gap-1 transition-colors">
             Get Quote
             <ArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5" />

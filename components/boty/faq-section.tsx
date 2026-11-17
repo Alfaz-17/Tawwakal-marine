@@ -20,7 +20,7 @@ export function FAQSection() {
     },
     {
       q: "What condition are the parts in (surplus, refurbished, new)?",
-      a: "We maintain clear condition grading for all inventory: Brand New Factory Sealed (original packaging), New Surplus / Open Box (unused), and 100% Bench-Tested Refurbished units carefully salvaged from modernized plants and decommissioned vessels at the Alang Ship Breaking Yard."
+      a: "We maintain clear condition grading for all inventory: Brand New Factory Sealed (original packaging), New Surplus / Open Box (unused), and Tested Refurbished units carefully inspected from modernized industrial and marine installations."
     },
     {
       q: "How fast can you deliver to vessel berths or global ports?",
@@ -28,11 +28,11 @@ export function FAQSection() {
     },
     {
       q: "Can you source obsolete or discontinued automation modules?",
-      a: "Yes, this is our core specialization. Because of our location in the Bhavnagar & Alang ship-recycling hub, we stock thousands of hard-to-find and discontinued PLCs (Siemens S7-200/300/400, Allen-Bradley SLC/PLC-5), legacy HMIs (Pro-face, Hakko), and obsolete Danfoss drives."
+      a: "Yes, this is our core specialization. We stock thousands of hard-to-find and discontinued PLCs (Siemens S7-200/300/400, Allen-Bradley SLC/PLC-5), legacy HMIs (Pro-face, Hakko), and obsolete Danfoss drives."
     },
     {
-      q: "What warranty and replacement support do you provide?",
-      a: "All refurbished and tested components carry a 6 to 12-month technical replacement warranty. If any verified defect arises during installation or commissioning, we offer immediate replacement or a full commercial refund."
+      q: "What support do you provide if a part has an issue?",
+      a: "All components are tested before packing. If any verified issue arises during installation, we offer an immediate replacement or a full refund."
     }
   ]
 
@@ -65,7 +65,7 @@ export function FAQSection() {
       <div className="ta-content relative z-10 max-w-4xl mx-auto px-3 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-12">
+        <div className="text-center max-w-2xl mx-auto mb-4 sm:mb-8">
           <div className="inline-flex items-center gap-2 text-[10px] sm:text-[11px] font-extrabold uppercase tracking-[0.2em] text-[#0095A8] mb-1.5 sm:mb-2">
             <HelpCircle className="w-3.5 h-3.5 text-[#0095A8]" />
             <span>COMMON QUESTIONS &amp; ANSWERS</span>
@@ -74,9 +74,6 @@ export function FAQSection() {
           <h2 className="font-sans font-black text-xl sm:text-3xl lg:text-4xl text-[#061D45] uppercase tracking-tight">
             FREQUENTLY ASKED QUESTIONS
           </h2>
-          <p className="mt-1 sm:mt-2 text-xs sm:text-sm text-muted-foreground leading-relaxed">
-            Clear answers about part testing, international delivery, warranty, and how to order.
-          </p>
         </div>
 
         {/* Accordion List */}

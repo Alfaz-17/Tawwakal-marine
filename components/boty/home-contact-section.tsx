@@ -58,7 +58,7 @@ export function HomeContactSection() {
       <div className="ta-content relative z-10 max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
         
         {/* Header */}
-        <div className="text-center max-w-2xl mx-auto mb-6 sm:mb-8">
+        <div className="text-center max-w-2xl mx-auto mb-4 sm:mb-8">
           <div className="inline-flex items-center gap-2 text-[10px] sm:text-[11px] font-extrabold uppercase tracking-[0.2em] text-[#0095A8] mb-1.5 sm:mb-2">
             <span>FAST RESPONSE</span>
           </div>
@@ -66,9 +66,6 @@ export function HomeContactSection() {
           <h2 className="font-sans font-black text-xl sm:text-3xl lg:text-4xl text-white uppercase tracking-tight">
             REQUEST A QUICK QUOTE
           </h2>
-          <p className="mt-1 sm:mt-2 text-xs sm:text-sm text-slate-300 max-w-lg mx-auto leading-relaxed">
-            Enter your part number, brand, or spare requirement. We will reply with price, availability, and photos within 2 hours.
-          </p>
         </div>
 
         {/* Centered Clean Form Card */}

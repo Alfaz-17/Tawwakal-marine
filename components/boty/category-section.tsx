@@ -24,16 +24,16 @@ const CORE_SECTORS = [
 ]
 
 const DEFAULT_CATEGORIES: CategoryItem[] = [
-  { name: "PLC Systems & Modules", slug: "plc-systems", coreCategory: "Industrial Automation", image: "/categories/plc-systems.png" },
-  { name: "Variable Frequency Drives (VFD)", slug: "vfd-drives", coreCategory: "Industrial Automation", image: "/categories/vfd-drives.png" },
-  { name: "HMI & Operator Panels", slug: "hmi-panels", coreCategory: "Industrial Automation", image: "/categories/hmi-panels.png" },
-  { name: "Engine Room Controls & AMS", slug: "engine-room-controls", coreCategory: "Marine Automation", image: "/categories/marine-automation.png" },
-  { name: "Bridge Navigation & Telecom", slug: "bridge-navigation", coreCategory: "Marine Automation", image: "/categories/telecom-and-communication.png" },
-  { name: "Marine Radar Systems", slug: "marine-radar", coreCategory: "Marine Automation", image: "/categories/radar.png" },
-  { name: "Oil Mist Detectors (OMD)", slug: "oil-mist-detectors", coreCategory: "Marine Automation", image: "/categories/oil-mist-detector.png" },
-  { name: "Circuit Breakers & Switchgear", slug: "circuit-breakers", coreCategory: "Industrial Automation", image: "/categories/circuit-breakers.png" },
-  { name: "Pressure & Level Transmitters", slug: "transmitters", coreCategory: "Marine Automation", image: "/categories/transmitter.png" },
-  { name: "Control Valves & Actuators", slug: "control-valves", coreCategory: "Marine Automation", image: "/categories/control-valve.png" },
+  { name: "PLC Systems & Modules", slug: "plc-systems", coreCategory: "Industrial Automation", image: "/categories/plc-systems.webp" },
+  { name: "Variable Frequency Drives (VFD)", slug: "vfd-drives", coreCategory: "Industrial Automation", image: "/categories/vfd-drives.webp" },
+  { name: "HMI & Operator Panels", slug: "hmi-panels", coreCategory: "Industrial Automation", image: "/categories/hmi-panels.webp" },
+  { name: "Engine Room Controls & AMS", slug: "engine-room-controls", coreCategory: "Marine Automation", image: "/categories/marine-automation.webp" },
+  { name: "Bridge Navigation & Telecom", slug: "bridge-navigation", coreCategory: "Marine Automation", image: "/categories/telecom-and-communication.webp" },
+  { name: "Marine Radar Systems", slug: "marine-radar", coreCategory: "Marine Automation", image: "/categories/radar.webp" },
+  { name: "Oil Mist Detectors (OMD)", slug: "oil-mist-detectors", coreCategory: "Marine Automation", image: "/categories/oil-mist-detector.webp" },
+  { name: "Circuit Breakers & Switchgear", slug: "circuit-breakers", coreCategory: "Industrial Automation", image: "/categories/circuit-breakers.webp" },
+  { name: "Pressure & Level Transmitters", slug: "transmitters", coreCategory: "Marine Automation", image: "/categories/transmitter.webp" },
+  { name: "Control Valves & Actuators", slug: "control-valves", coreCategory: "Marine Automation", image: "/categories/control-valve.webp" },
 ]
 
 export function CategorySection() {
@@ -83,9 +83,6 @@ export function CategorySection() {
             <h2 className="font-sans font-black text-xl sm:text-3xl lg:text-4xl text-[#061D45] uppercase tracking-tight">
               SHOP BY CATEGORIES
             </h2>
-            <p className="mt-1 text-xs sm:text-sm text-muted-foreground max-w-xl leading-relaxed">
-              Explore certified automation modules, motor drives, and marine spares organized by sector.
-            </p>
           </div>
 
           {/* Right Controls: Sector Filter Tabs */}
@@ -140,9 +137,11 @@ export function CategorySection() {
                     {/* Cardless Image Container */}
                     <div className="w-20 h-20 sm:w-32 sm:h-32 md:w-36 md:h-36 rounded-full bg-white border-2 border-[#CBD5E1] shadow-[0_3px_12px_rgba(6,29,69,0.06)] p-2 sm:p-3 flex items-center justify-center relative overflow-hidden transition-all duration-300 group-hover:scale-105 group-hover:shadow-[0_10px_26px_rgba(0,149,168,0.22)] group-hover:border-[#0095A8]">
                       <Image
-                        src={cat.image || "/categories/plc-systems.png"}
+                        src={(cat.image || "/categories/plc-systems.webp").replace(/\.png$/, '.webp')}
                         alt={cat.name}
                         fill
+                        loading={index < 8 ? "eager" : "lazy"}
+                        priority={index < 4}
                         className="object-contain p-2.5 sm:p-3.5 transition-transform duration-300 group-hover:scale-110"
                         sizes="(max-width: 640px) 80px, 144px"
                       />

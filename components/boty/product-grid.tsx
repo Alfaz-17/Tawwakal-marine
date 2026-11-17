@@ -45,7 +45,7 @@ export function ProductGrid() {
       <div className="ta-content relative z-10 max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-10">
+        <div className="text-center max-w-3xl mx-auto mb-4 sm:mb-8">
           <div className="inline-flex items-center gap-2 text-[10px] sm:text-[11px] font-extrabold uppercase tracking-[0.2em] text-[#0095A8] mb-1.5 sm:mb-2">
             <span>FEATURED HARDWARE</span>
           </div>
@@ -53,9 +53,6 @@ export function ProductGrid() {
           <h2 className="font-sans font-black text-xl sm:text-3xl lg:text-4xl text-[#061D45] uppercase tracking-tight">
             FEATURED SPARES &amp; EQUIPMENT
           </h2>
-          <p className="mt-1 sm:mt-2 text-xs sm:text-sm text-muted-foreground max-w-xl mx-auto leading-relaxed">
-            Browse tested automation modules, motor drives, and marine equipment ready for immediate worldwide dispatch.
-          </p>
 
           {/* Interactive Sector Switcher Tabs */}
           <div className="mt-4 sm:mt-6 inline-flex items-center p-1 rounded-full bg-white border border-[#CBD5E1] shadow-2xs gap-0.5 sm:gap-1 max-w-full overflow-x-auto">

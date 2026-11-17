@@ -11,7 +11,7 @@ export function AboutSection() {
   const verifiedStats = [
     { label: "Spares Categories", value: "50+" },
     { label: "OEM Brands", value: "15+" },
-    { label: "Warranty Backed", value: "1 Year" },
+    { label: "Global Ports", value: "80+" },
     { label: "Express Dispatch", value: "24-48h" },
   ]
 
@@ -64,8 +64,8 @@ export function AboutSection() {
                   <Compass className="w-4 h-4 sm:w-5 sm:h-5" />
                 </div>
                 <div>
-                  <div className="text-[9px] sm:text-[10px] font-bold text-[#0095A8] uppercase tracking-wider">Located at</div>
-                  <div className="text-[11px] sm:text-sm font-extrabold uppercase">Alang / Bhavnagar Hub</div>
+                  <div className="text-[9px] sm:text-[10px] font-bold text-[#0095A8] uppercase tracking-wider">Direct</div>
+                  <div className="text-[11px] sm:text-sm font-extrabold uppercase">Warehouse Stock</div>
                 </div>
               </div>
             </div>
@@ -82,11 +82,11 @@ export function AboutSection() {
             </h2>
 
             <p className="text-[11px] sm:text-sm text-foreground/80 leading-relaxed">
-              Based in Bhavnagar and Alang (India), <strong>Tawwakal Marine</strong> is a global supplier and stockist of marine equipment, ship navigation electronics, and industrial automation spares.
+              <strong>Tawwakal Marine</strong> is a global supplier and stockist of marine equipment, ship navigation electronics, and industrial automation spares.
             </p>
 
             <p className="text-[11px] sm:text-sm text-muted-foreground leading-relaxed">
-              We help vessel operators and factories avoid costly downtime. Every part is inspected, tested by technicians, and dispatched with fast worldwide delivery and a 1-year replacement warranty.
+              We help vessel operators and factories avoid costly downtime. Every part is inspected, tested by technicians, and dispatched with fast worldwide delivery.
             </p>
 
             {/* 4 Stats Grid - 2 cols on mobile */}
